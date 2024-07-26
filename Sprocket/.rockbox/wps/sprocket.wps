@@ -15,7 +15,8 @@
 #
 # Load the images and fonts we'll be using in here
 %Fl(2,12-Adobe-Helvetica-Bold.fnt)
-%Fl(3,14-Adobe-Helvetica-Bold.fnt)
+%Fl(3,14-Rockbox-Mix.fnt)
+%Fl(4,14-Adobe-Helvetica-Bold.fnt)
 %xl(A,repeat-strip.bmp,6,2,4)
 %xl(B,shuffle.bmp,6,2)
 %xl(C,crossfade.bmp,0,0)
@@ -121,10 +122,10 @@
 %pb(0,0,132,8,image,D,backdrop,E)
 #
 # Time progressed/left texts
-%V(3,96,45,14,3)%Vf(0)%Vb(3)
+%V(3,96,45,14,4)%Vf(0)%Vb(3)
 %al%s%pc
-%V(90,96,45,14,3)%Vf(0)%Vb(3)
+%V(90,96,45,14,4)%Vf(0)%Vb(3)
 %ar%s-%pr
-# Sleep timer, if present
-%V(48,96,42,14,3)%Vf(0)%Vb(3)
-%?bs<%t(2)%acSleep:;%t(8)%ac%bs|>
+# Sleep timer, if present. Otherwise, show current clock time.
+%V(48,96,42,14,4)%Vf(0)%Vb(3)
+%?bs<%t(2)%acSleep:;%t(8)%ac%bs|%ac%cH:%cM>

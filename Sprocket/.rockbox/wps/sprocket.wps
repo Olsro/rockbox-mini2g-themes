@@ -1,0 +1,130 @@
+# Theme Name: sprocket
+# By: Cam Mendoza <mendoza.cam@gmail.com> 
+# Platform: iPod Mini (138x110, 4 colour grayscale)
+# License: CC-BY-SA 3.0
+# Version: 1.0
+# Last updated: 2013-03-30
+# For a README and more information, please see the project page on GitHub:
+# <https://github.com/gogi-goji/sprocket-rockbox-theme> 
+#
+# WPS file (the While Playing Screen)
+# (.rockbox/wps/sprocket.wps)
+#
+# Enable the status bar (theme uses custom .sbs)
+%we
+#
+# Load the images and fonts we'll be using in here
+%Fl(2,12-Adobe-Helvetica-Bold.fnt)
+%Fl(3,14-Adobe-Helvetica-Bold.fnt)
+%xl(A,repeat-strip.bmp,6,2,4)
+%xl(B,shuffle.bmp,6,2)
+%xl(C,crossfade.bmp,0,0)
+%xl(D,prog-bar-full.bmp,0,0)
+%xl(E,prog-bar-empty.bmp,0,0)
+#
+# Playlist position
+%V(2,15,90,14,2)%Vf(0)%Vb(3)
+# no playlist name
+%al%s%pp of %pe
+# including playlist name, if available
+#%al%s%pp of %pe%?pn< in %pn|>
+#
+# Repeat / Shuffle / Crossfade indicators
+#
+# In order to display our icons right aligned and in a consistent order, we do
+# a couple of things.  We've already loaded our icons (note that repeat and 
+# shuffle have been offset to accommodate the CF icon being bigger than them), 
+# which we'll display in conditionally loaded viewports.  A string of 
+# conditionals is used to determine which viewports/icons to use, using the 
+# logic outlined in the following tree.
+#
+# Logic tree for which icon to display (display viewport marked with **name**):
+#
+#?repeat < off | on >
+#         +---+ +--+ 
+#          |     |
+#          |    +-----------------------------+ 
+#          |     **rrep** ?shuffle < on | off >
+#          |                        +--+ +---+
+#          |                         |    |
+#          |                         |   +---------------+
+#          |                         |    ?cf < off | on >
+#          |                         |         +---+ +--+
+#          |       +--------------------------+      |
+#          |        **mshuff** ?cf < off | on >      +-------+
+#          |                        +---+ +--+        **mcf**
+#      +--------------------+              |
+#       ?shuffle < on | off >              +-------+
+#                 +--+ +---+                **lcf**
+#                  |    |
+#                  |   +---------------+
+#                  |    ?cf < off | on >
+#                  |         +---+ +--+
+# +-------------------------+      |
+# **rshuff** ?cf < off | on >    +-------+
+#                 +---+ +--+      **rcf**
+#                        |
+#                       +-------+
+#                        **mcf**
+#
+# Repeat: %?mm<Off|All|One|Shuff|AB>
+# Shuffle: %?ps<On|Off>
+# Crossfade: %?xf<Off|On in any form>  
+# 
+%?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
+#
+# Icon viewports (rightmost|middle|leftmost-repeat|shuffle|cf)
+%Vl(rrepeat,119,16,17,9,-)%Vf(0)%Vb(3)
+%?mm<|%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)>
+%Vl(rshuffle,119,16,17,9,-)%Vf(0)%Vb(3)
+%xd(B)
+%Vl(rcf,119,16,17,9,-)%Vf(0)%Vb(3)
+%xd(C)
+%Vl(mshuffle,106,16,17,9,-)%Vf(0)%Vb(3)
+%xd(B)
+%Vl(mcf,106,16,17,9,-)%Vf(0)%Vb(3)
+%xd(C)
+%Vl(lcf,93,16,17,9,-)%Vf(0)%Vb(3)
+%xd(C)
+#
+#
+# Track information 
+# (Track Name, Artist, Album Name, Next Track Info (name/artist))
+#
+# If metadata not found, display file name in place of track name, (Unknown 
+# Artist) alternating with parent of parent directory name, and (Unknown Album)
+# alternating with parent directory name.
+#
+%V(0,27,138,56,3)%Vf(0)%Vb(3)
+#
+# Track name
+%ac%s%?it<%it|%fn>
+#
+# Artist Name 
+%ac%s%?ia<%ia|%?d(2)<%t(7)%(Unknown Artist%);%t(7)%(%d(2)%)|%(Unknown Artist%)>>
+#
+# Album Name (simple)
+#%ac%s%?id<%id|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>> 
+# Album Name;(year) [alternating]
+%ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>> 
+# Album Name (year) [entirely scrolling]
+#%ac%s%?id<%?iy<%?if(%iy,!=,0)<%id %(%iy%)|%id>|%id>|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>>
+#
+# Next track info [alternating between lines]
+%ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
+# Next track info [scrolling]
+#%ac%s%?Fn<%?It<Next: %It by %?Ia<%Ia|%(Unknown Artist%)>|%Fn>|- End of Playlist ->
+#
+# Progress Bar
+# D = full, E = Empty
+%V(3,85,132,8,-)%Vf(0)%Vb(3)
+%pb(0,0,132,8,image,D,backdrop,E)
+#
+# Time progressed/left texts
+%V(3,96,45,14,3)%Vf(0)%Vb(3)
+%al%s%pc
+%V(90,96,45,14,3)%Vf(0)%Vb(3)
+%ar%s-%pr
+# Sleep timer, if present
+%V(48,96,42,14,3)%Vf(0)%Vb(3)
+%?bs<%t(2)%acSleep:;%t(8)%ac%bs|>

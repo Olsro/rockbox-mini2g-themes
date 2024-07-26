@@ -1,0 +1,276 @@
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │                                                                          │
+# │   == M  I  N  I  M  •  SBS ==                             [BUILD]  [x]   │
+# │                                                                          │
+# │   BETA 3 • CLASSIC + MINI VER                                by yuuiko   │
+# │   2022-05-16                                                  CC-BY-SA   │
+# │                                                                          │
+# │   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓   │
+# │   ┃                                                                  ┃   │
+# │   ┃             Designed for and tested with B&W iPod 3G.            ┃   │
+# │   ┃                  Made to support all B&W iPods.                  ┃   │
+# │   ┃                                                                  ┃   │
+# │   ┃       Thank you to the following creators and their themes:      ┃   │
+# │   ┃                                                                  ┃   │
+# │   ┃                 CoverMax-XL by Christian Soffke                  ┃   │
+# │   ┃                 (Base themecode and inspiration)                 ┃   │
+# │   ┃         ipodVOL by xameius, submitted by Stephen Carroll         ┃   │
+# │   ┃                         (Speaker Icons)                          ┃   │
+# │   ┃                                                                  ┃   │
+# │   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛   │
+# │                                                                          │
+# │                                               MODE: =[Mini]= [Classic]   │
+# │                                                                          │
+# └──────────────────────────────────────────────────────────────────────────┘
+#
+#     Human-readable version.
+#
+#     To generate a valid SBS or WPS from this file, execute the piece of
+#     AppleScript on the bottom. It will do the following things for you:
+#
+#        1. Remove AppleScript code from this file
+#           (everything that comes after this line:)
+#               "# --- End of Rockbox theme. Beginning of AppleScript ---"
+#        3. Insert text blocks that were previously defined,
+#           and replace variables if necessary
+#        4. Remove all linefeeds
+#        5. Remove all tabs
+#        6. Remove every line that starts with the "#" character
+#
+#
+
+
+# Load needed fonts
+%Fl(2,14-Rockbox-Mix.fnt)
+%Fl(3,28-yukonum.fnt)
+%Fl(4,35-Nimbus.fnt)
+
+# Preload icons
+%xl(A,batt.bmp,0,0,16)
+%xl(B,d.bmp,0,0,7)
+%xl(C,u.bmp,0,0)
+%xl(D,playStatusIcns.bmp,0,0,9)
+%xl(E,icnlst.bmp,0,0,26)
+%xl(F,icnlst2.bmp,0,0,6)
+%xl(H,hold.bmp,0,0)
+%xl(Q,qs.bmp,0,0,4)
+
+# ------------------------------------------
+# DEFINE LIST VIEWPORTS:
+# ---------
+
+#%Vi(M,22,22,-,-,-)# HOME
+%Vi(x,0,16,-,-,-)# Default Lists
+#%Vi(n,8,16,-,-56,-)# Queue Lists
+#%Vi(q,39,31,243,204,-)# Quick
+%Vi(z,8,16,-,-,-)# Context
+%Vi(s,16,44,-16,-,-)# Setting
+#%Vi(r,0,25,319,178,-)# Record
+%Vi(u,0,0,1,1,-)# USB / HOLD
+
+# ------------------------------------------
+# Logic:
+# ---------
+
+#diable statusbar
+%wd
+#disable list title
+%?Lt<|>
+
+#SCREEN KEY %VI
+# u = USB/Hold
+# x = Default
+# q = QuickMenu
+# z = ContextMenu
+# r = Recording
+# M = HOME
+# n = Queue List
+
+#ELEMENT KEY %Vd
+# i = icons
+# t = title
+
+# rr = SCREEN REFRESH
+
+#MENUBAR
+%?if(%cs, !=, 1)<%?if(%cs, !=, 21)<%Vd(t)%Vd(i)>>
+
+#HOLD SCREEN
+#disable hold screen on usb(21), hide scroll to unlock on setting screen
+
+#%?mp<not|playing|paused|ffwd|rwd>
+
+#%?mp<%Vd(Unp)|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>>
+#%?if(%cs, =, 1)<%?mh<%VI(u)%Vd(rr)%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%VI(x)%Vd(rr)%Vd(src)%Vd(t)%Vd(i)>>
+
+%?if(%cs, =, 1)<%?mh<%VI(u)%Vd(rr)%?mp<%Vd(Unp)%Vd(Ui)|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>>|%VI(x)%Vd(rr)%Vd(src)%Vd(t)%Vd(i)>>
+
+
+#ALL OTHER SCREENS
+#%?if(%cs, !=, 1)<%VI(x)> #Not Home
+%?if(%cs, !=, 10)<%VI(x)> #Not QuickMenu
+%?if(%cs, !=, 15)<%VI(x)> #Not ContextMenu
+%?if(%cs, !=, 12)<%VI(x)> #Not Setting
+#%?if(%cs, !=, 3)<%VI(x)> #Not Recording
+%?if(%cs, !=, 21)<%VI(x)> #Not USB
+#%?if(%cs, =, 1)<%?mh<%VI(u)%Vd(U)%Vd(Mu)|%VI(M)%Vd(M)%Vd(Mu)>> #Home
+
+%?if(%cs, =, 10)<%Vd(Q)> #QuickMenu
+%?if(%cs, =, 15)<%VI(z)%Vd(Z)%Vd(rr)>
+#%?if(%cs, =, 15)<%?if(%Lt, =,Current Playlist)<|%VI(z)%Vd(Z)%Vd(rr)>>
+#%?if(%Lt, =,Current Playlist)<%VI(n)%Vd(N)%Vd(rr)>>
+%?if(%cs, =, 12)<%VI(s)%Vd(S)> #Setting
+#%?if(%cs, =, 3)<%VI(r)%Vd(r)> #Recording
+%?if(%cs, =, 21)<%VI(u)%Vd(U)%Vd(Ub)%Vd(Ui)> #USB
+
+#%?if(%cs, =, 15)<%?if(%Lt, =, Current Playlist)<%VI(n)>>
+
+# ------------------------------------------
+# Screens:
+# ---------
+
+#viewport refresh
+%Vl(rr,0,0,-,-,-)
+
+
+#QUICK (iPod Classic)=================================
+#%Vl(Q,70,53,17,6,-)
+#%xd(Qa)
+
+#%Vl(Q,70,84,17,6,-)
+#%xd(Qb)
+
+#%Vl(Q,70,66,17,6,-)
+#%xd(Qc)
+#%Vl(Q,70,72,17,6,-)
+#%xd(Qd)
+
+
+#QUICK(iPod mini)    =================================
+%Vl(Q,59,47,17,6,-)
+%xd(Qa)
+
+%Vl(Q,59,73,17,6,-)
+%xd(Qb)
+
+%Vl(Q,59,57,17,6,-)
+%xd(Qc)
+%Vl(Q,59,63,17,6,-)
+%xd(Qd)
+
+
+#CONTEXT             =================================
+%Vl(Z,6,16,1,-,-)%Vf(2)%Vb(2)
+%dr(0,0,-,-,0)
+
+
+#HOLD                =================================
+
+#playstatus
+#%Vl(U,8,15,10,10,-)
+%Vl(U,0,6,10,10,-)
+%?mh<%xd(H)|%?mp<|%xd(Da)|%xd(Db)|%xd(Dd)|%xd(De)|%xd(Df)|%xd(Dg)|%xd(Dh)|%xd(Di)>>
+
+#battery and disk
+#%Vl(Uc,20,15,10,10,-)
+%Vl(Uc,12,6,10,10,-)
+%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
+
+#%Vl(U,8,-43,44,28,-)%Vb(3)
+%Vl(U,0,-34,40,28,-)%Vb(3)
+%ca
+%cb%ce
+
+#%Vl(U,8,32,30,28,3)
+%Vl(U,0,24,30,28,3)
+%al%?cf<%cH|%cI>
+
+#%Vl(U,8,54,30,28,3)%Vf(1)
+%Vl(U,0,46,30,28,3)%Vf(1)
+%al%cM
+
+#%Vl(Ua,-108,15,98,98,-)%Vf(0)%Vb(3)
+%Vl(Ua,-98,6,98,98,-)%Vf(0)%Vb(3)
+%Cl(0,0,98,98,c,c)
+%Cd
+
+#%Vl(Una,-108,15,98,98,-)%Vf(2)%Vb(2)
+%Vl(Una,-98,6,98,98,-)%Vf(2)%Vb(2)
+#%dr(0,0,-,-,0)
+
+
+#USB                 -----------------------------------
+#%Vl(Ub,-108,15,98,98,-)%Vf(2)%Vb(1)
+%Vl(Ub,-98,6,98,98,-)%Vf(2)%Vb(1)
+%xd(C)
+
+#Left Icon
+#%Vl(Ui,8,15,10,10,-)
+%Vl(Ui,0,6,10,10,-)
+%?mh<%xd(H)|%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>>
+
+#Right Icon
+#%Vl(Ui,20,15,10,10,-)
+%Vl(Ui,12,6,10,10,-)
+%?mh<%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>|>
+
+
+#FREE LOCK           ================================= #REQUIRES MINI PATCH
+#%Vl(Unp,8,-40,35,35,4)%Vf(0)%Vb(3)
+%Vl(Unp,0,-40,35,35,4)%Vf(0)%Vb(3)
+%al%?cf<%cH|%cI>
+
+#%Vl(Unp,43,-40,45,35,4)%Vf(1)%Vb(3)
+%Vl(Unp,35,-40,45,35,4)%Vf(1)%Vb(3)
+%al:%cM
+
+#%Vl(Unp,-54,-37,44,28,-)
+%Vl(Unp,-47,-37,44,28,-)
+%ar%ca
+%ar%cb %ce
+
+#SETTING             =================================
+%Vl(S,16,30,-16,-,-)%Vf(1)%Vb(3)
+%s%Lt
+
+%Vl(S,0,16,-,14,-)%Vf(2)%Vb(2)
+%dr(0,0,-,-,0)
+%Vl(S,0,16,15,-,-)%Vf(2)%Vb(2)
+%dr(0,0,-,-,0)
+%Vl(S,-15,16,-,-,-)%Vf(2)%Vb(2)
+%dr(0,0,-,-,0)
+
+
+#SCROLL TO UNLOCK
+%Vl(src,0,15,-,-,-)%Vf(2)%Vb(3)
+
+
+%acScroll to Unlock
+
+
+
+# ------------------------------------------
+# Menubar:
+# ---------
+
+#playstatus
+%Vl(i,-28,2,10,10,-)
+%?mp<|%xd(Da)|%xd(Db)|%xd(Dd)|%xd(De)|%xd(Df)|%xd(Dg)|%xd(Dh)|%xd(Di)>
+
+#battery and disk
+%Vl(i,-12,2,10,10,-)
+%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
+
+#menu icon
+%Vl(t,1,1,12,12,-)
+#               <0      |1      |2      |3      |4      |5      |6      |7      |8      |9      |10     |11     |12     |13     |14     |15     |16     |17     |18     |19     |20     |21     |22     |23     |24     |25     |26     |27     |28     |29     |30     |31     |32     >
+%?mh<%xd(H)|%?Li<%xd(Ee)|%xd(Ea)|%xd(Eb)|%xd(Ec)|%xd(Ed)|%xd(Ee)|%xd(Ef)|%xd(Eg)|%xd(Eh)|%xd(Ei)|%xd(Ej)|%xd(Ek)|%xd(El)|%xd(Em)|%xd(En)|%xd(Eo)|%xd(Ep)|%xd(Er)|%xd(Er)|%xd(Es)|%xd(Et)|%xd(Es)|%xd(Ev)|%xd(Ew)|%xd(Ex)|%xd(Ey)|%xd(Ez)|%xd(Fa)|%xd(Fb)|%xd(Fc)|%xd(Fd)|%xd(Fe)|%xd(Ff)>>
+
+#menu title
+%Vl(t,14,0,-36,14,-)
+#%al%s%Lt %Li
+%al%s%?cs<iPod|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%?cc<%?cf<%cH:%cM|%cl:%cM %cP>>%?if(%St(battery display), =, graphic)<%?if(%bl, =, 100)<%arCGD|%?if(%bl, =, 99)<%arCGD|%ar%bl%%>>>|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+
+#separator bar on top
+%Vl(t,0,14,-,1,-)
+%dr(0,0,-,-,0)

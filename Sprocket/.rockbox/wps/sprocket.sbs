@@ -1,0 +1,90 @@
+# Theme Name: sprocket
+# By: Cam Mendoza <mendoza.cam@gmail.com> 
+# Platform: iPod Mini (138x110, 4 colour grayscale)
+# License: CC-BY-SA 3.0
+# Version: 1.0
+# Last updated: 2013-03-30
+# For a README and more information, please see the project page on GitHub:
+# <https://github.com/gogi-goji/sprocket-rockbox-theme> 
+#
+# SBS file (Base skin for a custom statusbar)
+# .rockbox/wps/sprocket.sbs
+#
+# Disable the default status bar (since we use our own)
+%wd
+#
+# Load the images and font we'll be using and give them labels
+#%Fl(2,14-Adobe-Helvetica-Bold.fnt)
+%Fl(2,12-Adobe-Helvetica-Bold.fnt)
+%xl(a,vol-bar-strip.bmp,0,0,7)
+%xl(b,hold.bmp,0,0)
+%xl(c,play-status.bmp,0,0,7)
+#%xl(d,hdd-activity.bmp,0,0)
+%xl(d,hdd-activity-wide.bmp,0,0)
+%xl(e,batt-strip.bmp,0,0,17)
+%xl(f,batt-charge-strip.bmp,0,0,8)
+%xl(g,separator.bmp,0,0)
+#
+# This is the base skin, so we cannot draw anything 
+# in the main viewport. Instead, we're going to make
+# some conditional viewports in which to put our icons
+# and battery % text.
+#
+# Volume Indicator
+#Viewport syntax: %V(x,y,width,height,font) %Vf(foreground colour) %Vb(background colour)
+%V(2,0,9,12,-)%Vf(0)%Vb(3)
+#Syntax:<Mute|...|0dB|Above 0dB>
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
+# Some repeats in here to help better map bar to perceived volume change 
+# (TODO: still needs improvement)
+#
+# Volume text
+%V(13,0,38,10,2)%Vf(0)%Vb(3)
+%al%pv dB
+#
+# Hold Switch
+%?mh<%Vd(hold)|%?mr<%Vd(hold)>>
+%Vl(hold,51,1,8,10,-)%Vf(0)%Vb(3)
+%xd(b)
+#
+# Playmode Status
+%V(64,2,10,10,-)%Vf(0)%Vb(3)
+#Syntax:<Stop|Play|Pause|Ffwd|Rew|Rec|Rec Pause|FM|FM Pause>
+%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+# Note: I don't think the iPod mini is capable of recording or FM radio, but
+# I've included a general icon for recording and another for any of the last
+# three, just in case.
+#
+# Disk Activity
+%?lh<%Vd(hdd)>
+%Vl(hdd,78,3,9,7,-)%Vf(0)%Vb(3)
+%xd(d)
+#
+# Battery Percentage Text
+%V(88,0,25,10,2)%Vf(0)%Vb(3)
+%ar%bl%%
+#
+# Battery Bar 
+# Check if battery is connected to power and charing, and display
+# the correct viewport accordingly
+%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
+# The Viewports
+%Vl(charging,113,1,25,10,-)%Vf(0)%Vb(3)
+%t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
+%Vl(charged,113,1,25,10,-)%Vf(0)%Vb(3)
+%xd(fh)
+%Vl(discharging,113,1,25,10,-)%Vf(0)%Vb(3)
+# Syntax: %?bl<-1|1|2|...|N>
+%?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)> 
+# Note: Used eq twice so 99%/100% of battery capacity have the
+# same icon displayed
+#
+# Line separator between status bar and everything else
+%V(0,13,138,1,-)%Vf(0)%Vb(3)
+%xd(g)
+#
+# The info viewport (Where all the menus and whatnot will be displayed) 
+# Setting the label (the first option) to - means it will be used by default
+%Vi(-,0,16,138,94,-)%Vf(0)%Vb(3)
+# Unfortunately, things look too squeezed if we increase the viewport height to have room for six lines
+#%Vi(-,0,12,138,98,-)%Vf(0)%Vb(3)

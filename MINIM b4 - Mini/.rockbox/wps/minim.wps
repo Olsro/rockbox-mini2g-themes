@@ -1,0 +1,164 @@
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │                                                                          │
+# │   == M  I  N  I  M  •  SBS ==                                      [x]   │
+# │                                                                          │
+# │   BETA 3 • CLASSIC + MINI VER                                by yuuiko   │
+# │   2022-05-16                                                  CC-BY-SA   │
+# │                                                                          │
+# │   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓   │
+# │   ┃                                                                  ┃   │
+# │   ┃             Designed for and tested with B&W iPod 3G.            ┃   │
+# │   ┃                  Made to support all B&W iPods.                  ┃   │
+# │   ┃                                                                  ┃   │
+# │   ┃       Thank you to the following creators and their themes:      ┃   │
+# │   ┃                                                                  ┃   │
+# │   ┃                 CoverMax-XL by Christian Soffke                  ┃   │
+# │   ┃                 (Base themecode and inspiration)                 ┃   │
+# │   ┃         ipodVOL by xameius, submitted by Stephen Carroll         ┃   │
+# │   ┃                         (Speaker Icons)                          ┃   │
+# │   ┃                                                                  ┃   │
+# │   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛   │
+# │                                                                          │
+# └──────────────────────────────────────────────────────────────────────────┘
+#
+#     Human-readable version.
+#
+#     To generate a valid SBS or WPS from this file, execute the piece of
+#     AppleScript on the bottom. It will do the following things for you:
+#
+#        1. Remove AppleScript code from this file
+#           (everything that comes after this line:)
+#               "# --- End of Rockbox theme. Beginning of AppleScript ---"
+#        3. Insert text blocks that were previously defined,
+#           and replace variables if necessary
+#        4. Remove all linefeeds
+#        5. Remove all tabs
+#        6. Remove every line that starts with the "#" character
+#
+#
+
+
+#Preload icons
+%xl(A,batt.bmp,0,0,16)
+%xl(B,d.bmp,0,0,7)
+%xl(C,scrub.bmp,0,0,2)
+%xl(D,playStatusIcns.bmp,0,0,9)
+%xl(E,hold.bmp,0,0)
+%xl(L,speaker.bmp,0,0,9)
+%xl(R,repeatMode.bmp,0,0,5)
+%xl(S,shuffle.bmp,12,0,2)
+
+
+# ---------
+# Logic:
+# ---------
+
+
+# Display Cover Art if available / reload cover art on hold / show lock icon
+%?mh<%Vd(hh)%?C<%Vd(c)|%Vd(cn)>|%?C<%Vd(c)|%Vd(cn)>>
+
+
+#Display volume bar and speaker icon
+#while volume is being adjusted
+
+#Display time elapsed/remaining while fast forwarding or rewinding
+
+%?mv(0.5)<%Vd(view_volumeBar_statusBarTop)%?if(%St(volume display), =,numeric)<%Vd(view_numericVolume_statusBarTop)|%Vd(view_speakerIcon_statusBarTop)>|%Vd(view_progressBar_statusBarTop)%?if(%mp,<,4)<%Vd(a)%Vd(b)%Vd(i)|%Vd(view_timeElapsed_statusBarTop)%Vd(view_timeRemaining_statusBarTop)>>
+
+%wd
+
+# ---------
+# Viewports:
+# ---------
+
+# --------------------------
+# --------   ICONS   -------
+# --------------------------
+
+
+#Repeat Mode and Shuffle indicators
+
+#shuffle and repeat
+%Vl(i,-22,-10,22,10,-)
+%?mm<%xd(Re)|%xd(Ra)|%xd(Rb)|%xd(Rc)|%xd(Rd)>
+%?if(%ps, =, s)<%xd(Sa)|%xd(Sb)>
+
+#play status
+%Vl(i,-22,-23,10,10,-)
+%?mp<%xd(Dc)|%xd(Da)|%xd(Db)|%xd(Dd)|%xd(De)>
+
+#batt
+%Vl(i,-10,-23,10,10,-)
+%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
+
+#HOLD
+%Vl(hh,-17,5,12,12,-)
+%xd(E)
+
+# --------------------------------------
+# --------   Volume Indicators   -------
+# --------------------------------------
+
+
+#Speaker icon
+%Vl(view_speakerIcon_statusBarTop,0,-16,14,12,-)
+%?pv<%xd(La)|%xd(Lb)|%xd(Lc)|%xd(Ld)|%xd(Le)|%xd(Lf)|%xd(Lg)|%xd(Lh)|%xd(Lh)|%xd(Lh)|%xd(Li)>
+
+%Vl(view_speakerIcon_statusBarTop,16,-16,-,-,-)
+%al%pv dB %ar%fc·%fb%fv
+
+# Volume Bar
+%Vl(view_volumeBar_statusBarTop,0,-33,-,5,-)%pv(0,0,-,5, noborder)
+
+
+
+# --------------------------------------
+# -------- Progress Indicators   -------
+# --------------------------------------
+
+# Progress Bar
+%Vl(view_progressBar_statusBarTop,0,-33,-,2,-)
+%pb(0,0,-,-, noborder)
+
+# Time elapsed
+%Vl(view_timeElapsed_statusBarTop,2,-26,40,14,-)
+%al%pc
+
+# Scrubber Icon
+#%Vl(view_timeElapsed_statusBarTop,72,-24,15,9,-)
+%Vl(view_timeElapsed_statusBarTop,62,-24,15,9,-)
+%?mp<|||%xd(Ca)|%xd(Cb)>
+
+# Time remaining
+%Vl(view_timeRemaining_statusBarTop,-40,-26,40,14,-)
+%ar-%pr
+
+
+
+# --------------------------------------
+# -----------  Song Info   -------------
+# --------------------------------------
+
+%V(0,-35,-,1,-)%Vb(0)
+%dr(-,-,-,-)
+
+# Album Art
+%Vl(c,0,0,-,-35,-)
+#%Cl(0,-30,160,160,c,c)
+%Cl(0,-20,138,138,c,c)
+%Cd
+
+# No Art
+%Vl(cn,0,0,-,-35,-)%Vf(1)%Vb(2)
+%pL(0,0,-,-,vertical,noborder)
+
+
+# Title
+%Vl(a,0,-28,-25,14,-)
+%?mp<|%s||%s>%al%?it<%it|%fn>
+
+
+# Composer if available (display only for Classical music) & Artist
+#& Album
+%Vl(b,0,-14,-25,14,-)
+%?mp<|%s||%s>%al%?mv(3)<%pp %Sx(of) %pe - %pt|%?if(%ig,=,Classical)<%?ic<By %ic - >%ia%?id< %(%id%)>|%ia%?id< %(%id%)>>>

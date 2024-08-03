@@ -104,7 +104,7 @@
 #%?if(%cs, =, 1)<%?mh<%VI(u)%Vd(rr)%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%VI(x)%Vd(rr)%Vd(src)%Vd(t)%Vd(i)>>
 
 # When a new track start while you are on the lockscreen, this line will fix visual glitches and also forces showing correctly the album artwork
-%?if(%cs, =, 1)<%?mh<%?pS(0.2)<%?mp<|%Vd(rr)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)|||>>>>>
+%?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)|||>>>>>
 
 %?if(%cs, =, 1)<%?mh<%VI(u)%Vd(rr)%?mp<%Vd(Unp)%Vd(Ui)|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>>|%VI(x)%Vd(rr)%Vd(src)%Vd(t)%Vd(i)>>
 

@@ -106,7 +106,7 @@
 # When a new track start while you are on the lockscreen, this line will fix visual glitches and also forces showing correctly the album artwork
 %?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)|||>>>>>
 
-%?if(%cs, =, 1)<%?mh<%VI(u)%Vd(rr)%?mp<%Vd(Unp)%Vd(Ui)|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>>|%VI(x)%Vd(rr)%Vd(src)%Vd(t)%Vd(i)>>
+%?if(%cs, =, 1)<%?and(%if(%mh, =, 1), %if(%lh, =, 0))<%VI(u)%Vd(rr)%?mp<%Vd(Unp)%Vd(Ui)|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>|%Vd(U)%Vd(Uc)%?C<%Vd(Ua)|%Vd(Una)%Vd(Ui)>>|%?if(%mh, =, 1)<%VI(x)|%VI(x)%Vd(rr)%Vd(src)%Vd(t)%Vd(i)>>>
 
 #ALL OTHER SCREENS
 #%?if(%cs, !=, 1)<%VI(x)> #Not Home

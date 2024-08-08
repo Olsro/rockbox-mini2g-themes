@@ -23,9 +23,6 @@ This theme already supports japanese characters just fine out of the box.
 
 Please support the designer/theme creator here by donating on his patreon : https://www.patreon.com/yuuiko
 
-![Alt text](MINIM%20b4%20-%20Mini/screenshots/1.png?raw=true "WPS")
-![Alt text](MINIM%20b4%20-%20Mini/screenshots/2.png?raw=true "Home")
-
 # Sprocket by gogi-goji
 Improvements made by me : 
 - Add important fonts in the package
@@ -43,10 +40,6 @@ Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme
 
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
 
-![Alt text](Sprocket/screenshots/1.png?raw=true "Home")
-![Alt text](Sprocket/screenshots/2.png?raw=true "WPS")
-![Alt text](Sprocket/screenshots/3.png?raw=true "WPS with cover art")
-
 # Sprocket or Minim ?
 Sprocket is simple and clean.
 
@@ -54,3 +47,13 @@ Minim is gorgeous especially if you have album covers for most or all of your so
 Minim even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.
 
 Minim received many improvements to improve usability. I recommend you to try both and do your tests. At first, I found Sprocket more desirable but I improved Minim to add necessary info on the WPS and fix all the flaws that bothered me on it during daily usage. So now, I prefer Minim. But both are usable and good.
+
+# Screenshots
+## Minim
+![Alt text](MINIM%20b4%20-%20Mini/screenshots/1.png?raw=true "WPS")
+![Alt text](MINIM%20b4%20-%20Mini/screenshots/2.png?raw=true "Home")
+
+## Sprocket
+![Alt text](Sprocket/screenshots/1.png?raw=true "Home")
+![Alt text](Sprocket/screenshots/2.png?raw=true "WPS")
+![Alt text](Sprocket/screenshots/3.png?raw=true "WPS with cover art")

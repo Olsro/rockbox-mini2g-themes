@@ -26,11 +26,11 @@ Please support the designer/theme creator here by donating on his patreon : http
 # Sprocket by gogi-goji
 Improvements made by me : 
 - Add important fonts in the package
-- Use the font "Rockbox-Mix" on the WPS screen to support japanese characters
+- Use the font "Rockbox-Mix" on the WPS to support japanese characters
 - Use the font "11-Sazanami-Mincho" in menus to print more lines and support japanese characters everywhere
 - Enable scrollbar on the right of the screen
 - Use a pointer for selections to enhance readability
-- If no sleep timer is configured, the current clock (hour + minutes) will be shown on the bottom-center of the WPS screen so you can know what time is it just by looking your screen at any time without having to fiddle in menus
+- If no sleep timer is configured, the current clock (hour + minutes) will be shown on the bottom-center of the WPS so you can know what time is it just by looking your screen at any time without having to fiddle in menus
 - This theme can now show album arts ! It's fully conditional, so you still get full screen texts if you disabled album arts globally or if your current track does not have any available one.
 
 Bug fixes made by me : 
@@ -41,8 +41,9 @@ Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
 
 # Sprocket or Minim ?
-Sprocket shows much more info on the WPS screen. Sprocket is simple and clean.
+Sprocket is simple and clean.
 
 Minim is gorgeous especially if you have album covers for most or all of your songs. Using a script like this one works great at building optimized covers that the Mini will not struggle to show : https://github.com/Xpl0itU/rockbox_scripts/blob/master/album_art_fix.py
 Minim even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.
 
+Minim received many improvements to improve usability. I recommend you to try both and do your tests. At first, I found Sprocket more desirable but I improved Minim to add necessary info on the WPS and fix all the flaws that bothered me on it during daily usage. So now, I prefer Minim. But both are usable and good.

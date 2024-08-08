@@ -17,6 +17,8 @@
 %Fl(2,12-Adobe-Helvetica-Bold.fnt)
 %Fl(3,14-Rockbox-Mix.fnt)
 %Fl(4,14-Adobe-Helvetica-Bold.fnt)
+%Fl(5,11-Sazanami-Mincho.fnt)
+
 %xl(A,repeat-strip.bmp,6,2,4)
 %xl(B,shuffle.bmp,6,2)
 %xl(C,crossfade.bmp,0,0)
@@ -102,8 +104,8 @@
 # Artist) alternating with parent of parent directory name, and (Unknown Album)
 # alternating with parent directory name.
 #
-# Centered (Right after the cover art)
-%Vl(TICA,59,27,79,56,3)%Vf(0)%Vb(3)
+# Centered (Right after the cover art). Use a smaller font in this case because we have less screen width available.
+%Vl(TICA,59,27,79,56,5)%Vf(0)%Vb(3)
 #
 # Track name
 %ac%s%?it<%it|%fn>
@@ -118,6 +120,7 @@
 # Album Name (year) [entirely scrolling]
 #%ac%s%?id<%?iy<%?if(%iy,!=,0)<%id %(%iy%)|%id>|%id>|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>>
 #
+
 # Next track info [alternating between lines]
 %ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
 # Next track info [scrolling]

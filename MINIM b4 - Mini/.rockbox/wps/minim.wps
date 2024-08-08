@@ -48,8 +48,9 @@
 %xl(R,repeatMode.bmp,0,0,5)
 %xl(S,shuffle.bmp,12,0,2)
 
-# Preload font
+# Preload fonts
 %Fl(2,14-Rockbox-Mix.fnt)
+%Fl(3,11-Sazanami-Mincho.fnt)
 
 
 # ---------
@@ -66,7 +67,7 @@
 
 #Display time elapsed/remaining while fast forwarding or rewinding
 
-%?mv(0.5)<%Vd(view_volumeBar_statusBarTop)%?if(%St(volume display), =,numeric)<%Vd(view_numericVolume_statusBarTop)|%Vd(view_speakerIcon_statusBarTop)>|%Vd(view_progressBar_statusBarTop)%?if(%mp,<,4)<%Vd(a)%Vd(b)%Vd(i)|%Vd(view_timeElapsed_statusBarTop)%Vd(view_timeRemaining_statusBarTop)>>
+%?mv(0.5)<%Vd(view_volumeBar_statusBarTop)%?if(%St(volume display), =,numeric)<%Vd(view_numericVolume_statusBarTop)|%Vd(view_speakerIcon_statusBarTop)>|%Vd(view_progressBar_statusBarTop)%?if(%mp,<,4)<%Vd(a)%Vd(b)%Vd(d)%Vd(e)%Vd(i)|%Vd(view_timeElapsed_statusBarTop)%Vd(view_timeRemaining_statusBarTop)>>
 
 %wd
 
@@ -104,14 +105,17 @@
 
 
 #Speaker icon
-%Vl(view_speakerIcon_statusBarTop,0,-16,14,12,2)
+%Vl(view_speakerIcon_statusBarTop,0,-12,14,12,2)
 %?pv<%xd(La)|%xd(Lb)|%xd(Lc)|%xd(Ld)|%xd(Le)|%xd(Lf)|%xd(Lg)|%xd(Lh)|%xd(Lh)|%xd(Lh)|%xd(Li)>
 
-%Vl(view_speakerIcon_statusBarTop,16,-16,-,-,2)
-%al%pv dB %ar%fc·%fb%fv
+%Vl(view_speakerIcon_statusBarTop,17,-12,-,-,2)
+%al%pv dB
+
+%Vl(view_speakerIcon_statusBarTop,0,-30,-,14,2)
+%al%fc·%fb%fv
 
 # Volume Bar
-%Vl(view_volumeBar_statusBarTop,0,-33,-,5,2)%pv(0,0,-,5, noborder)
+%Vl(view_volumeBar_statusBarTop,0,-38,-,5,2)%pv(0,0,-,5, noborder)
 
 
 
@@ -120,7 +124,7 @@
 # --------------------------------------
 
 # Progress Bar
-%Vl(view_progressBar_statusBarTop,0,-33,-,2,2)
+%Vl(view_progressBar_statusBarTop,0,-38,-,2,2)
 %pb(0,0,-,-, noborder)
 
 # Time elapsed
@@ -142,26 +146,32 @@
 # -----------  Song Info   -------------
 # --------------------------------------
 
-%V(0,-35,-,1,2)%Vb(0)
+%V(0,-40,-,1,2)%Vb(0)
 %dr(-,-,-,-)
 
 # Album Art
-%Vl(c,0,0,-,-35,2)
+%Vl(c,0,0,-,-40,2)
 #%Cl(0,-30,160,160,c,c)
 %Cl(0,-20,138,138,c,c)
 %Cd
 
 # No Art
-%Vl(cn,0,0,-,-35,2)%Vf(1)%Vb(2)
+%Vl(cn,0,0,-,-40,2)%Vf(1)%Vb(2)
 %pL(0,0,-,-,vertical,noborder)
 
-
 # Title
-%Vl(a,0,-28,-25,14,2)
-%?mp<|%s||%s>%al%?it<%it|%fn>
-
+%Vl(a,0,-33,-60,11,3)
+%s%al%?it<%it|%fn>
 
 # Composer if available (display only for Classical music) & Artist
 #& Album
-%Vl(b,0,-14,-25,14,2)
-%?mp<|%s||%s>%al%?mv(3)<%pp %Sx(of) %pe - %pt|%?if(%ig,=,Classical)<%?ic<By %ic - >%ia%?id< %(%id%)>|%ia%?id< %(%id%)>>>
+%Vl(b,0,-22,-25,11,3)
+%s%al%?if(%ig,=,Classical)<%?ic<By %ic - >%ia%?id< %(%id%)>|%ia%?id< %(%id%)>>
+
+# What's next
+%Vl(d,0,-11,-25,11,3)
+%al%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
+
+# Playlist position
+%Vl(e,-60,-35,60,11,3)
+%ar%s%pp/%pe

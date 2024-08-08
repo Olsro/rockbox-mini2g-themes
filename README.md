@@ -4,7 +4,15 @@ I think this work may benefit to the community, so I share it in the hope that t
 
 # Minim b4 by yuuiko
 Improvements made by me : 
-- Use the font "Sazanami" 11px only in menus to show more lines and content on screen which helps you at navigation especially if you have a large library
+- Use the font "Sazanami" by default in menus
+- Important layout improvements on WPS : 
+	- Added the playlist state (current/total)
+	- Reduced slightly the surface of album artwork to show one more line
+	- Use Sazanami Mincho 11px to show a 3rd line of content
+	- Add another line that show info about the Next song in the playlist
+	- Text is now scrolling even if the song is not playing
+	- When changing the volume, the audio format is now shown on a different line
+	- After changing the volume, the WPS return instantly to normal state. There's no need anymore to show different info during a few seconds (which was in my opinion not a very practical user experience design choice because those info should be accessible just by an eye-sight without any user interaction)
 
 Bug fixes made by me : 
 - Fixed a missing space between the Month name and the day of month in the lockscreen when music is playing (there is 2 different lockscreen, one that show if music is playing and another that show when there's no music to play. On the second one, there was nothing to fix, it was correct.)

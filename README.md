@@ -2,7 +2,7 @@
 I improved themes I like to use on my iPod Mini 2G to fix bugs and better fit my needs. I did not made those themes from scratch, I am just using them and applying a few improvements/bug fixes to improve my user experience.
 I think this work may benefit to the community, so I share it in the hope that this will be useful to someone in the vast Internet.
 
-# Minit b4 by yuuiko
+# Minim b4 by yuuiko
 Improvements made by me : 
 - Use the font "Sazanami" 11px only in menus to show more lines and content on screen which helps you at navigation especially if you have a large library
 
@@ -31,9 +31,9 @@ Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme
 
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
 
-# Sprocket or Minit ?
+# Sprocket or Minim ?
 Sprocket can't show album arts but it show much more info on the WPS screen. Sprocket is simple and clean.
 
-Minit is gorgeous especially if you have album covers for most or all of your songs. Using a script like this one works great at building optimized covers that the Mini will not struggle to show : https://github.com/Xpl0itU/rockbox_scripts/blob/master/album_art_fix.py
-Minit even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.
+Minim is gorgeous especially if you have album covers for most or all of your songs. Using a script like this one works great at building optimized covers that the Mini will not struggle to show : https://github.com/Xpl0itU/rockbox_scripts/blob/master/album_art_fix.py
+Minim even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.
 

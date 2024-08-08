@@ -73,6 +73,8 @@
 # Crossfade: %?xf<Off|On in any form>  
 # 
 %?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
+# Show cover art view, or normal view
+%?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
 #
 # Icon viewports (rightmost|middle|leftmost-repeat|shuffle|cf)
 %Vl(rrepeat,119,16,17,9,-)%Vf(0)%Vb(3)
@@ -87,6 +89,10 @@
 %xd(C)
 %Vl(lcf,93,16,17,9,-)%Vf(0)%Vb(3)
 %xd(C)
+# Cover art viewport
+%Vl(CA,2,28,55,55,3)
+%Cl(0,0,55,55,l,t)
+%Cd
 #
 #
 # Track information 
@@ -96,7 +102,34 @@
 # Artist) alternating with parent of parent directory name, and (Unknown Album)
 # alternating with parent directory name.
 #
-%V(0,27,138,56,3)%Vf(0)%Vb(3)
+# Centered (Right after the cover art)
+%Vl(TICA,59,27,79,56,3)%Vf(0)%Vb(3)
+#
+# Track name
+%ac%s%?it<%it|%fn>
+#
+# Artist Name 
+%ac%s%?ia<%ia|%?d(2)<%t(7)%(Unknown Artist%);%t(7)%(%d(2)%)|%(Unknown Artist%)>>
+#
+# Album Name (simple)
+#%ac%s%?id<%id|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>> 
+# Album Name;(year) [alternating]
+%ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>> 
+# Album Name (year) [entirely scrolling]
+#%ac%s%?id<%?iy<%?if(%iy,!=,0)<%id %(%iy%)|%id>|%id>|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>>
+#
+# Next track info [alternating between lines]
+%ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
+# Next track info [scrolling]
+#%ac%s%?Fn<%?It<Next: %It by %?Ia<%Ia|%(Unknown Artist%)>|%Fn>|- End of Playlist ->
+#
+# Progress Bar
+# D = full, E = Empty
+%V(3,85,132,8,-)%Vf(0)%Vb(3)
+%pb(0,0,132,8,image,D,backdrop,E)
+#
+# Full View (all screen without cover art)
+%Vl(TI,0,27,138,56,3)%Vf(0)%Vb(3)
 #
 # Track name
 %ac%s%?it<%it|%fn>

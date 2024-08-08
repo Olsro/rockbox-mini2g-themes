@@ -23,6 +23,7 @@ Improvements made by me :
 - Enable scrollbar on the right of the screen
 - Use a pointer for selections to enhance readability
 - If no sleep timer is configured, the current clock (hour + minutes) will be shown on the bottom-center of the WPS screen so you can know what time is it just by looking your screen at any time without having to fiddle in menus
+- This theme can now show album arts ! It's fully conditional, so you still get full screen texts if you disabled album arts globally or if your current track does not have any available one.
 
 Bug fixes made by me : 
 - Clear any previous wallpaper when applying the theme
@@ -32,7 +33,7 @@ Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
 
 # Sprocket or Minim ?
-Sprocket can't show album arts but it show much more info on the WPS screen. Sprocket is simple and clean.
+Sprocket shows much more info on the WPS screen. Sprocket is simple and clean.
 
 Minim is gorgeous especially if you have album covers for most or all of your songs. Using a script like this one works great at building optimized covers that the Mini will not struggle to show : https://github.com/Xpl0itU/rockbox_scripts/blob/master/album_art_fix.py
 Minim even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.

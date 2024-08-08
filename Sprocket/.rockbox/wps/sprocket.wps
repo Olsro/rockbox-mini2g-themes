@@ -128,4 +128,4 @@
 %ar%s-%pr
 # Sleep timer, if present. Otherwise, show current clock time.
 %V(48,96,42,14,4)%Vf(0)%Vb(3)
-%?bs<%t(2)%acSleep:;%t(8)%ac%bs|%ac%cH:%cM>
+%?bs<%t(2)%acSleep:;%t(8)%ac%bs|%t(2)%acClock:;%t(8)%ac%cH:%cM>

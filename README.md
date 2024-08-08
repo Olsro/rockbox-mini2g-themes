@@ -4,11 +4,12 @@ I think this work may benefit to the community, so I share it in the hope that t
 
 # Minit b4 by yuuiko
 Improvements made by me : 
-- On the home menu, show the precise battery percentage rather than the useless "iPod" text. Having a way to show easily the battery percentage without fiddling in the menus is important on the Mini.
+- Use the font "Sazanami" 11px only in menus to show more lines and content on screen which helps you at navigation especially if you have a large library
 
 Bug fixes made by me : 
 - Fixed a missing space between the Month name and the day of month in the lockscreen when music is playing (there is 2 different lockscreen, one that show if music is playing and another that show when there's no music to play. On the second one, there was nothing to fix, it was correct.)
 - Fix to the glitchy lockscreen each time a new song is played in the background while staying on the lockscreen (I inspired myself from the code of this theme https://github.com/D0-0K/adwaitapod to figure out how to fix it).
+- Fix multiple issues that could cause the lockscreen to glitch out
 
 This theme already supports japanese characters just fine out of the box.
 

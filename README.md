@@ -23,8 +23,8 @@ This theme already supports japanese characters just fine out of the box.
 
 Please support the designer/theme creator here by donating on his patreon : https://www.patreon.com/yuuiko
 
-![Alt text](MINIM b4 - Mini/screenshots/1.png?raw=true "WPS")
-![Alt text](MINIM b4 - Mini/screenshots/2.png?raw=true "Home")
+![Alt text](MINIM%20b4%20-%20Mini/screenshots/1.png?raw=true "WPS")
+![Alt text](MINIM%20b4%20-%20Mini/screenshots/2.png?raw=true "Home")
 
 # Sprocket by gogi-goji
 Improvements made by me : 

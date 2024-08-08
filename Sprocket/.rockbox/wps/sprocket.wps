@@ -28,9 +28,9 @@
 # Playlist position
 %V(2,15,90,14,2)%Vf(0)%Vb(3)
 # no playlist name
-%al%s%pp of %pe
+%al%s%pp %Sx(of) %pe
 # including playlist name, if available
-#%al%s%pp of %pe%?pn< in %pn|>
+#%al%s%pp %Sx(of) %pe%?pn< in %pn|>
 #
 # Repeat / Shuffle / Crossfade indicators
 #

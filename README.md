@@ -23,6 +23,9 @@ This theme already supports japanese characters just fine out of the box.
 
 Please support the designer/theme creator here by donating on his patreon : https://www.patreon.com/yuuiko
 
+![Alt text](MINIM b4 - Mini/screenshots/1.png?raw=true "WPS")
+![Alt text](MINIM b4 - Mini/screenshots/2.png?raw=true "Home")
+
 # Sprocket by gogi-goji
 Improvements made by me : 
 - Add important fonts in the package
@@ -39,6 +42,10 @@ Bug fixes made by me :
 Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme and https://themes.rockbox.org/index.php?themeid=1820&target=ipodmini2g
 
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
+
+![Alt text](Sprocket/screenshots/1.png?raw=true "Home")
+![Alt text](Sprocket/screenshots/2.png?raw=true "WPS")
+![Alt text](Sprocket/screenshots/3.png?raw=true "WPS with cover art")
 
 # Sprocket or Minim ?
 Sprocket is simple and clean.

@@ -83,16 +83,16 @@
 #Repeat Mode and Shuffle indicators
 
 #shuffle and repeat
-%Vl(i,-22,-10,22,10,2)
+%Vl(i,-22,-23,22,10,2)
 %?mm<%xd(Re)|%xd(Ra)|%xd(Rb)|%xd(Rc)|%xd(Rd)>
 %?if(%ps, =, s)<%xd(Sa)|%xd(Sb)>
 
 #play status
-%Vl(i,-22,-23,10,10,2)
+%Vl(i,-22,-35,10,10,2)
 %?mp<%xd(Dc)|%xd(Da)|%xd(Db)|%xd(Dd)|%xd(De)>
 
 #batt
-%Vl(i,-10,-23,10,10,2)
+%Vl(i,-10,-35,10,10,2)
 %?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
 
 #HOLD
@@ -160,7 +160,7 @@
 %pL(0,0,-,-,vertical,noborder)
 
 # Title
-%Vl(a,0,-33,-60,11,3)
+%Vl(a,0,-33,-25,11,3)
 %s%al%?it<%it|%fn>
 
 # Composer if available (display only for Classical music) & Artist
@@ -169,9 +169,9 @@
 %s%al%?if(%ig,=,Classical)<%?ic<By %ic - >%ia%?id< %(%id%)>|%ia%?id< %(%id%)>>
 
 # What's next
-%Vl(d,0,-11,-25,11,3)
+%Vl(d,0,-11,-60,11,3)
 %al%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
 
 # Playlist position
-%Vl(e,-60,-35,60,11,3)
+%Vl(e,-60,-11,60,11,3)
 %ar%s%pp/%pe

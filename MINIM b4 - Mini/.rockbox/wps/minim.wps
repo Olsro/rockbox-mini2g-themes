@@ -164,9 +164,9 @@
 %s%al%?it<%it|%fn>
 
 # Composer if available (display only for Classical music) & Artist
-#& Album
+#& Album & Year
 %Vl(b,0,-22,-25,11,3)
-%s%al%?if(%ig,=,Classical)<%?ic<By %ic - >%ia%?id< %(%id%)>|%ia%?id< %(%id%)>>
+%s%al%?if(%ig,=,Classical)<%?ic<By %ic - >%ia%?id< %(%id%)>|%ia%?id< %(%id%)>>%?iy<%?if(%iy,!=,0)< %(%iy%)>>
 
 # What's next
 %Vl(d,0,-11,-60,11,3)

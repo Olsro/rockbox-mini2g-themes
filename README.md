@@ -13,6 +13,7 @@ Improvements made by me :
 	- Text is now scrolling even if the song is not playing
 	- When changing the volume, the audio format is now shown on a different line
 	- After changing the volume, the WPS return instantly to normal state. There's no need anymore to show different info during a few seconds (which was in my opinion not a very practical user experience design choice because those info should be accessible just by an eye-sight without any user interaction)
+	- Show track year ID3 at the end of the second line if the info is available
 
 Bug fixes made by me : 
 - Fixed a missing space between the Month name and the day of month in the lockscreen when music is playing (there is 2 different lockscreen, one that show if music is playing and another that show when there's no music to play. On the second one, there was nothing to fix, it was correct.)

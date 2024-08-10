@@ -170,7 +170,7 @@
 
 # What's next
 %Vl(d,0,-11,-60,11,3)
-%al%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
+%al%s%?Fn<%?It<%t(7.5)Next: %It;%t(1.5)Next: by;%t(7)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
 
 # Alternating bottom right text : Playlist position, Clock hour, Battery percentage
 %Vl(e,-60,-11,60,11,3)

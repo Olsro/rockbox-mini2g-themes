@@ -14,6 +14,7 @@ Improvements made by me :
 	- When changing the volume, the audio format is now shown on a different line
 	- After changing the volume, the WPS return instantly to normal state. There's no need anymore to show different info during a few seconds (which was in my opinion not a very practical user experience design choice because those info should be accessible just by an eye-sight without any user interaction)
 	- Show track year ID3 at the end of the second line if the info is available
+	- Show sleep timer if available in 3rd line (bottom-right) and show a short description of each info before showing it (during 1.5 seconds)
 
 Bug fixes made by me : 
 - Fixed a missing space between the Month name and the day of month in the lockscreen when music is playing (there is 2 different lockscreen, one that show if music is playing and another that show when there's no music to play. On the second one, there was nothing to fix, it was correct.)
@@ -21,6 +22,9 @@ Bug fixes made by me :
 - Fix multiple issues that could cause the lockscreen to glitch out
 
 This theme already supports japanese characters just fine out of the box.
+With all of my work, you lose 5 pixels that were previously showing the cover art in WPS but you get a precious 3rd line using a smaller font. It's less minimal than the work and the vision of yuuiko, but in my opinion it is much more usable because you now get access to every important data directly on your WPS just by looking into your screen a few seconds without having to touch to anything. Minim is now competiting in terms of usability against a very complete and simple looking theme like Sprocket in my opinion, while still looking and feeling much more "Minimal" and esthetic than any other available Rockbox themes available for the iPod Mini.
+
+I also decided purposely to not touch the lockscreen (when you HOLD from the home screen) because it is supposed to look nice but not supposed to replace the real WPS, so don't ask me to add more data on this space. I like how the cover art is taking all space here with only current hour + date with a big font.
 
 Please support the designer/theme creator here by donating on his patreon : https://www.patreon.com/yuuiko
 

@@ -14,6 +14,7 @@ Improvements made by me :
 	- When changing the volume, the audio format is now shown on a different line
 	- After changing the volume, the WPS return instantly to normal state. There's no need anymore to show different info during a few seconds (which was in my opinion not a very practical user experience design choice because those info should be accessible just by an eye-sight without any user interaction)
 	- Show track year ID3 at the end of the second line if the info is available
+	- Show current clock and battery percentage in 3rd line (bottom-right), as alternating text
 	- Show sleep timer if available in 3rd line (bottom-right) and show a short description of each info before showing it (during 1.5 seconds)
 
 Bug fixes made by me : 

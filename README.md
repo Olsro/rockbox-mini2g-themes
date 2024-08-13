@@ -52,7 +52,7 @@ Sprocket is simple and clean.
 Minim is gorgeous especially if you have album covers for most or all of your songs. Using a script like this one works great at building optimized covers that the Mini will not struggle to show : https://github.com/Olsro/rockbox_scripts/blob/master/album_art_fix.py
 Minim even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.
 
-Minim received many improvements to improve usability. I recommend you to try both and do your tests. At first, I found Sprocket more desirable but I improved Minim to add necessary info on the WPS and fix all the flaws that bothered me on it during daily usage. So now, I prefer Minim. But both are usable and good.
+Minim received many improvements to improve usability. I recommend you to try both and do your tests. At first, I found Sprocket more desirable but I improved Minim to add necessary info on the WPS and fix all the flaws that bothered me on it during daily usage. So now, I prefer Minim. But both are usable and good. Disabling cover arts on both themes seems to improve navigation performance in certain cases and to reduce overall disk accesses. If you need the best battery possible life on WPS, disabling completely cover arts and using Sprocket is probably what you will want to do.
 
 # Screenshots
 ## Minim

@@ -7,7 +7,7 @@ I think this work may benefit to the community, so I share it in the hope that t
 
 # Minim b4 by yuuiko
 Improvements made by me : 
-- Use the font "Sazanami" by default in menus
+- Use the font "Sazanami Mincho 11px" by default in menus (to show more content on screen without having to scroll)
 - Important layout improvements on WPS : 
 	- Added the playlist state (current/total)
 	- Reduced slightly the surface of album cover to show one more line

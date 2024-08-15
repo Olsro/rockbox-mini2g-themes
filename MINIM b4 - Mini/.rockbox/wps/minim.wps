@@ -95,10 +95,6 @@
 %Vl(i,-10,-35,10,10,2)
 %?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
 
-#HOLD
-%Vl(hh,-17,5,12,12,2)
-%xd(E)
-
 # --------------------------------------
 # --------   Volume Indicators   -------
 # --------------------------------------
@@ -175,3 +171,7 @@
 # Alternating bottom right text : Playlist position, Clock hour, Battery percentage, Sleep timer (if available)
 %Vl(e,-60,-11,60,11,3)
 %ar%s%t(5)%pp/%pe;%ar%s%t(1.5)Clock:;%ar%s%t(3.5)%cH:%cM:%cS;%ar%s%t(1.5)Battery:;%ar%s%t(3.5)%bl%%;%?bs<%ar%s%t(1.5)Sleep:|%t(0)>;%?bs<%ar%s%t(3.5)%bs|%t(0)>
+
+#HOLD
+%Vl(hh,-17,5,12,12,2)
+%xd(E)

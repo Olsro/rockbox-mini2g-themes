@@ -35,6 +35,8 @@
 #
 # If "Now Playing" or in the shortcuts screen (MENU key maintained in WPS), show the current volume and the volume icon. In all other cases, show the list title and hide volume indicators.
 %?or(%if(%cs, =, 2),%if(%cs, =, 10))<%Vd(VI)%Vd(VT)|%Vd(TBM)>
+# Show hold icon in status bar is locked
+%?mh<%Vd(hold)|%?mr<%Vd(hold)>>
 # Volume Indicator
 #Viewport syntax: %V(x,y,width,height,font) %Vf(foreground colour) %Vb(background colour)
 %Vl(VI,2,0,9,12,-)%Vf(0)%Vb(3)
@@ -51,7 +53,6 @@
 %al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 #
 # Hold Switch
-%?mh<%Vd(hold)|%?mr<%Vd(hold)>>
 %Vl(hold,51,1,8,10,-)%Vf(0)%Vb(3)
 %xd(b)
 #

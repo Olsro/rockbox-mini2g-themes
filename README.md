@@ -1,5 +1,8 @@
 # Motivations
-I improved themes I like to use on my iPod Mini 2G to fix bugs and better fit my needs. I did not made those themes from scratch, I am just using them and applying a few improvements/bug fixes to improve my user experience.
+Unlike the iPod Classics, the iPod Mini did not received the same love by themes developers and most themes that I could find were pretty far from my expectations and my needs. I found only 2 themes (Sprocket and Minim) that were very interesting and good looking, and started to use them regularly. I learnt how to modify Rockbox themes (using this excellent tutorial : https://www.rockbox.org/wiki/CustomWPS and also by looking how these 2 themes were made by reading their code).
+
+The idea started essentially about just fixing some bugs and adding very small improvements but the project grew up over time and now both themes are greatly improved esthetically and ergonomically. I did not made those themes from scratch and my work could not exist without the Rockbox project and without the work of those themes developers who made a solid base to work with.
+
 I think this work may benefit to the community, so I share it in the hope that this will be useful to someone in the vast Internet.
 
 # Minim b4 by yuuiko

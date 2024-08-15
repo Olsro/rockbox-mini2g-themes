@@ -34,8 +34,8 @@ Improvements made by me :
 - Add important fonts in the package
 - Use the font "Rockbox-Mix" on the WPS to support japanese characters
 - Use the font "11-Sazanami-Mincho" in menus to print more lines and support japanese characters everywhere
+- Only in menus (not in WPS), the title of the list is now shown in the status bar rather than the current volume icon + text. This means that all content lists will show one more line of content. The size of an iPod Mini screen is so small, so each line shown on screen is precious and helps at navigation within a large music library. Having the list title in the status bar creates also a clear visual separation between the title and the content which increases readability and comfort.
 - Enable scrollbar on the right of the screen
-- Use a pointer for selections to enhance readability
 - If no sleep timer is configured, the current clock (hour + minutes) will be shown on the bottom-center of the WPS so you can know what time is it just by looking your screen at any time without having to fiddle in menus
 - This theme can now show album arts ! It's fully conditional, so you still get full screen texts if you disabled album arts globally or if your current track does not have any available one.
 

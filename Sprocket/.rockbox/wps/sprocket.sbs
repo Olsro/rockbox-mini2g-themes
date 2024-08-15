@@ -12,10 +12,13 @@
 #
 # Disable the default status bar (since we use our own)
 %wd
+# Disable list title
+%?Lt<|>
 #
 # Load the images and font we'll be using and give them labels
 #%Fl(2,14-Adobe-Helvetica-Bold.fnt)
 %Fl(2,12-Adobe-Helvetica-Bold.fnt)
+%Fl(3,11-Sazanami-Mincho.fnt)
 %xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
 %xl(c,play-status.bmp,0,0,7)
@@ -30,17 +33,22 @@
 # some conditional viewports in which to put our icons
 # and battery % text.
 #
+# If "Now Playing" or in the shortcuts screen (MENU key maintained in WPS), show the current volume and the volume icon. In all other cases, show the list title and hide volume indicators.
+%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%Vd(VI)%Vd(VT)|%Vd(TBM)>
 # Volume Indicator
 #Viewport syntax: %V(x,y,width,height,font) %Vf(foreground colour) %Vb(background colour)
-%V(2,0,9,12,-)%Vf(0)%Vb(3)
+%Vl(VI,2,0,9,12,-)%Vf(0)%Vb(3)
 #Syntax:<Mute|...|0dB|Above 0dB>
 %?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
 # Some repeats in here to help better map bar to perceived volume change 
 # (TODO: still needs improvement)
 #
 # Volume text
-%V(13,0,38,10,2)%Vf(0)%Vb(3)
+%Vl(VT,13,0,38,10,2)%Vf(0)%Vb(3)
 %al%pv dB
+# Title bar menu
+%Vl(TBM,0,1,51,11,3)%Vf(0)%Vb(3)
+%al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 #
 # Hold Switch
 %?mh<%Vd(hold)|%?mr<%Vd(hold)>>

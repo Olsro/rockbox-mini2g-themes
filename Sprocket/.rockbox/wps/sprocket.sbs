@@ -34,7 +34,7 @@
 # and battery % text.
 #
 # If "Now Playing" or in the shortcuts screen (MENU key maintained in WPS), show the current volume, play status and the volume icon. In all other cases, show the list title and hide volume indicators.
-%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%Vd(VI)%Vd(VT)%Vd(PMS)|%?mh<%Vd(TBMS)%Vd(PMS)|%Vd(TBML)>>
+%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%Vd(VI)%Vd(VT)%Vd(PMS)|%?mh<%Vd(TBMS)%Vd(PMS)|?lh<%Vd(TBML)|%Vd(TBMLL)>>>
 # Show hold icon in status bar is locked
 %?mh<%Vd(hold)>
 # Show disk activity icon in status bar if there's any
@@ -56,6 +56,9 @@
 # Title bar menu (long, when lock icon is hidden)
 %Vl(TBML,0,1,75,11,3)%Vf(0)%Vb(3)
 %al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+# Title bar menu (longest, when there's also no disk activity)
+%Vl(TBMLL,0,1,90,11,3)%Vf(0)%Vb(3)
+%al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 #
 # Hold Switch
 %Vl(hold,51,1,8,10,-)%Vf(0)%Vb(3)
@@ -73,8 +76,8 @@
 %xd(d)
 #
 # Battery Percentage Text
-%V(88,0,25,10,2)%Vf(0)%Vb(3)
-%ar%bl%%
+%V(93,0,20,10,2)%Vf(0)%Vb(3)
+%ar%?if(%bl, =, 100)<F|%bl%%>
 #
 # Battery Bar 
 # Check if battery is connected to power and charing, and display

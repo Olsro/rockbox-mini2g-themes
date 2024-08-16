@@ -42,6 +42,8 @@ Improvements made by me :
 - Enable scrollbar on the right of the screen
 - If no sleep timer is configured, the current clock (hour + minutes) will be shown on the bottom-center of the WPS so you can know what time is it just by looking your screen at any time without having to fiddle in menus
 - This theme can now show album arts ! It's fully conditional, so you still get full screen texts if you disabled album arts globally or if your current track does not have any available one.
+- The play status (Play/Stop icon) is now showed on the status bar outside the WPS (so in menus) only when the lock icon is shown, to let more space to show more characters of the current title label during navigation in the menus and in the file/database browser.
+- The battery percentage text "100%" is now replaced by "F" to indicate you that your iPod is now fully charged. This saves some space and allowed to reduce the size of the text area, which will be used by the title of the current view (list) in the status bar if it is long enough.
 
 Bug fixes made by me : 
 - Clear any previous wallpaper when applying the theme

@@ -34,7 +34,7 @@
 # and battery % text.
 #
 # If "Now Playing" or in the shortcuts screen (MENU key maintained in WPS), show the current volume, play status and the volume icon. In all other cases, show the list title and hide volume indicators.
-%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%?lh<%Vd(hddwps)>%Vd(BPT)%Vd(VI)%Vd(VT)%Vd(PMS)|%?lh<%Vd(hdd)|%Vd(BPT)>%?mh<%Vd(TBMS)%Vd(PMS)|%Vd(TBML)>>
+%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%?lh<%Vd(hddwps)>%Vd(BPT)%Vd(VI)%Vd(VT)%Vd(PMS)|%?mh<%?lh<%Vd(hddwps)>%Vd(BPT)%Vd(TBMS)%Vd(PMS)|%?lh<%Vd(hdd)|%Vd(BPT)>%Vd(TBML)>>
 # Show hold icon in status bar is locked
 %?mh<%Vd(hold)>
 # Check if battery is connected to power and charging, and display

@@ -33,10 +33,12 @@
 # some conditional viewports in which to put our icons
 # and battery % text.
 #
-# If "Now Playing" or in the shortcuts screen (MENU key maintained in WPS), show the current volume and the volume icon. In all other cases, show the list title and hide volume indicators.
-%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%Vd(VI)%Vd(VT)|%?mh<%Vd(TBMS)|%Vd(TBML)>>
+# If "Now Playing" or in the shortcuts screen (MENU key maintained in WPS), show the current volume, play status and the volume icon. In all other cases, show the list title and hide volume indicators.
+%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%Vd(VI)%Vd(VT)%Vd(PMS)|%?mh<%Vd(TBMS)%Vd(PMS)|%Vd(TBML)>>
 # Show hold icon in status bar is locked
 %?mh<%Vd(hold)>
+# Show disk activity icon in status bar if there's any
+%?lh<%Vd(hdd)>
 # Volume Indicator
 #Viewport syntax: %V(x,y,width,height,font) %Vf(foreground colour) %Vb(background colour)
 %Vl(VI,2,0,9,12,-)%Vf(0)%Vb(3)
@@ -52,7 +54,7 @@
 %Vl(TBMS,0,1,51,11,3)%Vf(0)%Vb(3)
 %al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 # Title bar menu (long, when lock icon is hidden)
-%Vl(TBML,0,1,64,11,3)%Vf(0)%Vb(3)
+%Vl(TBML,0,1,75,11,3)%Vf(0)%Vb(3)
 %al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 #
 # Hold Switch
@@ -60,15 +62,13 @@
 %xd(b)
 #
 # Playmode Status
-%V(64,2,10,10,-)%Vf(0)%Vb(3)
+%Vl(PMS,64,2,10,10,-)%Vf(0)%Vb(3)
 #Syntax:<Stop|Play|Pause|Ffwd|Rew|Rec|Rec Pause|FM|FM Pause>
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 # Note: I don't think the iPod mini is capable of recording or FM radio, but
 # I've included a general icon for recording and another for any of the last
 # three, just in case.
 #
-# Disk Activity
-%?lh<%Vd(hdd)>
 %Vl(hdd,78,3,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
 #

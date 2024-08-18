@@ -62,6 +62,7 @@ Some things that I noticed about cover arts :
 - I recommend embedding the images directly in all of your music. It looks like it is simplier for Rockbox to show a picture that is embedded in the file rather than making a new disk request to load it from another file in the disk.
 - Configure Rockbox to load from embedded in priority : Settings -> Playback Settings -> Album Art and select "Prefer Embedded"
 - If you really like to see your cover arts, Minim will show them much better in WPS than any other Rockbox theme (but not fully, only around 1/2 of your cover). Minim show them at 138x138 then cut a part of it to show the data from your music at the bottom of your screen. Sprocket and the default theme (cabbiev2) show cover arts fully at 55x55 which make them often very unreadable (so it's useless and frustrating to look at if those are just looking like garbage). It's looking much better to not show all of it but with a greater resolution. With Minim, you can often recognize the artists and sometimes read some big text written in the picture which is a pretty fun experience on the tiny screen of an iPod Mini.
+- It looks like Rockbox can't support embedded cover arts on certain formats like .opus. Use mp3tag software to extract them to cover.jpg . Embedded cover arts should work just fine on most formats like mp3, aac, musepack (mpc)
 
 When configured exactly like this, your covers should load instantly.
 

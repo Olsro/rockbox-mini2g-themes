@@ -54,12 +54,16 @@ Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
 
 # Sprocket or Minim ?
-Sprocket is simple and clean.
+The choice is up to you, I currently just like to use both. I prefer slightly Minim because the design is much more advanced and ambitious, and because cover arts looks much better in it. With my improvements, Minim is now just as usable as Sprocket; you have access to all important info in the WPS just by looking at any time your screen during a few seconds.
 
-Minim is gorgeous especially if you have album covers for most or all of your songs. Using a script like this one works great at building optimized covers that the Mini will not struggle to show : https://github.com/Olsro/rockbox_scripts/blob/master/album_art_fix.py
-Minim even has a lockscreen if you lock your iPod while being in the homescreen, and that lockscreen is showing the current date and time which can be very useful.
+# Thoughts about cover arts
+Some things that I noticed about cover arts : 
+- This tool https://www.mp3tag.de/en/download.html can in the menu "Actions" mass convert embedded images to plain jpeg. I recommend using it to convert to 138x138 jpeg all of your library. Why 138x138 and not 150x150 ? Because it's how Minim will render your image. Using the exact amount of pixels will avoid Rockbox to do any work with resizing in most cases. Don't push the quality slider to the maximum, it's un-necessary and overkill, keep it at the default level (which is 2 bars below the maximum).
+- I recommend embedding the images directly in all of your music. It looks like it is simplier for Rockbox to show a picture that is embedded in the file rather than making a new disk request to load it from another file in the disk.
+- Configure Rockbox to load from embedded in priority : Settings -> Playback Settings -> Album Art and select "Prefer Embedded"
+- If you really like to see your cover arts, Minim will show them much better in WPS than any other Rockbox theme (but not fully, only around 1/2 of your cover). Minim show them at 138x138 then cut a part of it to show the data from your music at the bottom of your screen. Sprocket and the default theme (cabbiev2) show cover arts fully at 55x55 which make them often very unreadable (so it's useless and frustrating to look at if those are just looking like garbage). It's looking much better to not show all of it but with a greater resolution. With Minim, you can often recognize the artists and sometimes read some big text written in the picture which is a pretty fun experience on the tini screen of an iPod Mini.
 
-Minim received many improvements to improve usability. I recommend you to try both and do your tests. At first, I found Sprocket more desirable but I improved Minim to add necessary info on the WPS and fix all the flaws that bothered me on it during daily usage. So now, I prefer Minim. But both are usable and good. Disabling cover arts on both themes seems to improve navigation performance in certain cases and to reduce overall disk accesses. If you need the best battery possible life on WPS, disabling completely cover arts is probably what you will want to do.
+When configured exactly like this, your covers should load instantly.
 
 # Screenshots
 ## Minim

@@ -73,6 +73,9 @@ Some things that I noticed about cover arts :
 
 When configured exactly like this, your covers should load instantly.
 
+# Some special characters do not show correctly
+The font "Sazanami Mincho 11px" support almost all special characters in all languages but not all. You can use "mp3tag" to mass replace problematic characters (For example, "œ" can become "oe" which means the same but will show correctly). The only font that supports natively all characters is "14-RockBox-Mix" but it is much taller than Sazanami. You can find more details about fonts international coverage here : https://translate.rockbox.org/whichfont.php
+
 # Screenshots
 ## Minimless
 ![Alt text](Minimless/screenshots/1.png?raw=true "WPS1")

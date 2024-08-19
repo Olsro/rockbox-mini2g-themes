@@ -145,15 +145,32 @@
 %V(0,-40,-,1,2)%Vb(0)
 %dr(-,-,-,-)
 
+# Show the duration of the current track at right of the cover art placeholder
+%Vl(c,90,0,-,-40,2)
+%ac%s%pc
+
+%ac/
+
+%ac%s%pt
+
+# Also show it if there's no available cover art
+%Vl(cn,90,0,-,-40,2)
+%ac%s%pc
+
+%ac/
+
+%ac%s%pt
+
 # Album Art
-%Vl(c,0,0,-,-40,2)
+%Vl(c,0,0,90,-40,2)
 #%Cl(0,-30,160,160,c,c)
-%Cl(0,-20,138,138,c,c)
+%Cl(0,-10,90,90,c,c)
 %Cd
 
 # No Art
-%Vl(cn,0,0,-,-40,2)%Vf(1)%Vb(2)
-%pL(0,0,-,-,vertical,noborder)
+%Vl(cn,0,0,90,-40,2)%Vf(1)%Vb(2)
+# Don't show the volume output realtime viewer to avoid lags for the OPUS format because it is very difficult to decode
+%?if(%fc,!=,Opus)<%pL(0,0,90,-,vertical,noborder)>
 
 # Title
 %Vl(a,0,-33,-25,11,3)
@@ -173,5 +190,5 @@
 %ar%s%t(5)%pp/%pe;%ar%s%t(1.5)Clock:;%ar%s%t(3.5)%cH:%cM:%cS;%ar%s%t(1.5)Battery:;%ar%s%t(3.5)%bl%%;%?bs<%ar%s%t(1.5)Sleep:|%t(0)>;%?bs<%ar%s%t(3.5)%bs|%t(0)>
 
 #HOLD
-%Vl(hh,-17,5,12,12,2)
+%Vl(hh,0,0,12,12,2)
 %xd(E)

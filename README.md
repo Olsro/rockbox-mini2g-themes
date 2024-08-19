@@ -8,6 +8,7 @@ I think this work may benefit to the community, so I share it in the hope that t
 # Minim b4 by yuuiko
 Improvements made by me : 
 - Use the font "Sazanami Mincho 11px" by default in menus (to show more content on screen without having to scroll)
+- The realtime volume viewer is now disabled automatically for OPUS files in order to save some precious CPU cycles. The iPod Mini is struggling hard with this format, but this format is very useful to encode audiobooks at very low bitrate (32 to 40kbps) but with high quality.
 - Important layout improvements on WPS : 
 	- Added the playlist state (current/total)
 	- Reduced slightly the surface of album cover to show one more line of text
@@ -19,6 +20,7 @@ Improvements made by me :
 	- Show track year ID3 at the end of the second line if the info is available
 	- Show current clock and battery percentage in 3rd line (bottom-right), as alternating text
 	- Show sleep timer if available in 3rd text line (bottom-right) and show a short description of each info before showing it (during 1.5 seconds)
+	- Reduced the surface of the album art/real time volume viewer to show the current played time of the current song and the total time of the current song. This info is very important for long tracks and also for audiobooks so you will be able to know when your current chapter will end (as long as you properly splitted your book to 1 file per chapter).
 
 Bug fixes made by me : 
 - Fixed a missing space between the Month name and the day of month in the lockscreen when music is playing (there is 2 different lockscreen, one that show if music is playing and another that show when there's no music to play. On the second one, there was nothing to fix, it was correct.)
@@ -73,7 +75,8 @@ When configured exactly like this, your covers should load instantly.
 
 # Screenshots
 ## Minim
-![Alt text](MINIM%20b4%20-%20Mini/screenshots/1.png?raw=true "WPS")
+![Alt text](MINIM%20b4%20-%20Mini/screenshots/1.png?raw=true "WPS1")
+![Alt text](MINIM%20b4%20-%20Mini/screenshots/3.png?raw=true "WPS2")
 ![Alt text](MINIM%20b4%20-%20Mini/screenshots/2.png?raw=true "Home")
 
 ## Sprocket

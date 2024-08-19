@@ -187,7 +187,7 @@
 
 # Alternating bottom right text : Playlist position, Clock hour, Battery percentage, Sleep timer (if available)
 %Vl(e,-60,-11,60,11,3)
-%ar%s%t(5)%pp/%pe;%ar%s%t(1.5)Clock:;%ar%s%t(3.5)%cH:%cM:%cS;%ar%s%t(1.5)Battery:;%ar%s%t(3.5)%bl%%;%?bs<%ar%s%t(1.5)Sleep:|%t(0)>;%?bs<%ar%s%t(3.5)%bs|%t(0)>
+%ar%s%t(5)%pp/%pe;%ar%s%t(1.5)Clock:;%ar%s%t(3.5)%cH:%cM;%ar%s%t(1.5)Battery:;%ar%s%t(3.5)%bl%%;%?bs<%ar%s%t(1.5)Sleep:|%t(0)>;%?bs<%ar%s%t(3.5)%bs|%t(0)>
 
 #HOLD
 %Vl(hh,0,0,12,12,2)

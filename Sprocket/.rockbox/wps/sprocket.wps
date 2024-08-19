@@ -114,13 +114,13 @@
 %ac%s%?ia<%ia|%?d(2)<%t(7)%(Unknown Artist%);%t(7)%(%d(2)%)|%(Unknown Artist%)>>
 #
 # Album Name (simple)
-#%ac%s%?id<%id|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>> 
+%ac%s%?id<%id|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>> 
 # Album Name;(year) [alternating]
-%ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>> 
+#%ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>> 
 # Album Name (year) [entirely scrolling]
 #%ac%s%?id<%?iy<%?if(%iy,!=,0)<%id %(%iy%)|%id>|%id>|%?d(1)<%t(6)%(Unknown Album%);%t(6)%(%d(1)%)|%(Unknown Album%)>>
 #
-
+%ac%s%?id<%?iy<%(%iy%)>>
 # Next track info [alternating between lines]
 %ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|- End of Playlist ->
 # Next track info [scrolling]

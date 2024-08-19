@@ -93,7 +93,7 @@
 
 #batt
 %Vl(i,-10,-35,10,10,2)
-%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
+%?lh<%t(1)%xd(Ba);%t(1)%xd(Bb);%t(1)%xd(Bc);%t(1)%xd(Bd);%t(1)%xd(Be);%t(1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(1)%xd(Aj);%t(1)%xd(Ak);%t(1)%xd(Al);%t(1)%xd(Am);%t(1)%xd(An)%t(2)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
 
 # --------------------------------------
 # --------   Volume Indicators   -------

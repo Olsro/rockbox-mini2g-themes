@@ -176,7 +176,7 @@
 #battery and disk
 #%Vl(Uc,20,15,10,10,2)
 %Vl(Uc,12,6,10,10,2)
-%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
+%?lh<%t(1)%xd(Ba);%t(1)%xd(Bb);%t(1)%xd(Bc);%t(1)%xd(Bd);%t(1)%xd(Be);%t(1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(1)%xd(Aj);%t(1)%xd(Ak);%t(1)%xd(Al);%t(1)%xd(Am);%t(1)%xd(An)%t(2)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
 
 #%Vl(U,8,-43,44,28,2)%Vb(3)
 %Vl(U,0,-34,40,28,2)%Vb(3)
@@ -209,12 +209,12 @@
 #Left Icon
 #%Vl(Ui,8,15,10,10,2)
 %Vl(Ui,0,6,10,10,2)
-%?mh<%xd(H)|%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>>
+%?mh<%xd(H)|%?lh<%t(1)%xd(Ba);%t(1)%xd(Bb);%t(1)%xd(Bc);%t(1)%xd(Bd);%t(1)%xd(Be);%t(1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(1)%xd(Aj);%t(1)%xd(Ak);%t(1)%xd(Al);%t(1)%xd(Am);%t(1)%xd(An)%t(2)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>>
 
 #Right Icon
 #%Vl(Ui,20,15,10,10,2)
 %Vl(Ui,12,6,10,10,2)
-%?mh<%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>|>
+%?mh<%?lh<%t(1)%xd(Ba);%t(1)%xd(Bb);%t(1)%xd(Bc);%t(1)%xd(Bd);%t(1)%xd(Be);%t(1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(1)%xd(Aj);%t(1)%xd(Ak);%t(1)%xd(Al);%t(1)%xd(Am);%t(1)%xd(An)%t(2)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>|>
 
 
 #FREE LOCK           ================================= #REQUIRES MINI PATCH
@@ -261,7 +261,7 @@
 
 #battery and disk
 %Vl(i,-12,2,10,10,2)
-%?lh<%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(0.1)%xd(Aj);%t(0.1)%xd(Ak);%t(0.1)%xd(Al);%t(0.1)%xd(Am);%t(0.1)%xd(An)%t(0.4)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
+%?lh<%t(1)%xd(Ba);%t(1)%xd(Bb);%t(1)%xd(Bc);%t(1)%xd(Bd);%t(1)%xd(Be);%t(1)%xd(Bf);|%?bp<%?if(%bl, =, 100)<%xd(Ai)|%?if(%bl, =, 99)<%xd(Ai)|%t(1)%xd(Aj);%t(1)%xd(Ak);%t(1)%xd(Al);%t(1)%xd(Am);%t(1)%xd(An)%t(2)%xd(Ao);>>|%?bl<%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)>>>
 
 #menu icon
 %Vl(t,1,1,12,12,2)

@@ -25,6 +25,7 @@ Bug fixes made by me :
 - Fix to the glitchy lockscreen each time a new song is played in the background while staying on the lockscreen (I inspired myself from the code of this theme https://github.com/D0-0K/adwaitapod to figure out how to fix it).
 - Fix multiple issues that could cause the lockscreen to glitch out
 - The lock icon was not showing up on WPS if no album cover is present or if album cover is disabled, it's now fixed
+- Reduce CPU usage (makes the battery charging and the disk accesses icons refreshing much slower)
 
 This theme already supports japanese characters just fine out of the box.
 With all of my work, you lose 5 pixels that were previously showing the cover art in WPS but you get a precious 3rd line using a smaller font. It's less minimal than the work and the vision of yuuiko, but in my opinion it is much more usable because you now get access to every important data directly on your WPS just by looking into your screen a few seconds without having to touch to anything. Minim is now competiting in terms of usability against a very complete and simple looking theme like Sprocket in my opinion, while still looking and feeling much more "Minimal" and esthetic than any other available Rockbox themes available for the iPod Mini.

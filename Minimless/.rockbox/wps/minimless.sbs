@@ -38,7 +38,7 @@
 #        6. Remove every line that starts with the "#" character
 #
 #
-
+# Minimless improvements by OlsroFR
 
 # Load needed fonts
 %Fl(2,14-Rockbox-Mix.fnt)

@@ -8,8 +8,9 @@
 # <https://github.com/gogi-goji/sprocket-rockbox-theme> 
 #
 # WPS file (the While Playing Screen)
-# (.rockbox/wps/sprocket.wps)
+# (.rockbox/wps/sprocketmodern.wps)
 #
+# SprocketModern improvements by OlsroFR
 # Enable the status bar (theme uses custom .sbs)
 %we
 #

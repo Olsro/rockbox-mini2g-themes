@@ -36,7 +36,7 @@
 #        6. Remove every line that starts with the "#" character
 #
 #
-
+# Minimless improvements by OlsroFR
 
 #Preload icons
 %xl(A,batt.bmp,0,0,16)

@@ -1,11 +1,13 @@
 # Motivations
 Unlike the iPod Classics, the iPod Mini did not received the same love by themes developers and most themes that I could find were pretty far from my expectations and my needs. I found only 2 themes (Sprocket and Minim) that were very interesting and good looking, and started to use them regularly. I learnt how to modify Rockbox themes (using this excellent tutorial : https://www.rockbox.org/wiki/CustomWPS and also by looking how these 2 themes were made by reading their code).
 
-The idea started essentially about just fixing some bugs and adding very small improvements but the project grew up over time and now both themes are greatly improved esthetically and ergonomically. I did not made those themes from scratch and my work could not exist without the Rockbox project and without the work of those themes developers who made a solid base to work with.
+The idea started essentially about just fixing some bugs and adding very small improvements but the project grew up over time and now both themes are greatly improved esthetically and ergonomically so I also renamed them. I did not made those themes from scratch and my work could not exist without the Rockbox project and without the work of those themes developers who made a solid base to work with.
 
 I think this work may benefit to the community, so I share it in the hope that this will be useful to someone in the vast Internet.
 
-# Minim b4 by yuuiko
+# Minimless
+Based on Minim b4 by yuuiko. It's still Minimal... but less minimal than it used to be.
+
 Improvements made by me : 
 - Use the font "Sazanami Mincho 11px" by default in menus (to show more content on screen without having to scroll)
 - The realtime volume viewer is now disabled automatically for OPUS files in order to save some precious CPU cycles. The iPod Mini is struggling hard with this format, but this format is very useful to encode audiobooks at very low bitrate (32 to 40kbps) but with high quality.
@@ -36,7 +38,9 @@ I also decided purposely to not touch the lockscreen (when you HOLD from the hom
 
 Please support the designer/theme creator here by donating on his patreon : https://www.patreon.com/yuuiko
 
-# Sprocket by gogi-goji
+# SprocketModern
+Based on Sprocket by gogi-goji
+
 Improvements made by me : 
 - Add important fonts in the package
 - Use the font "Rockbox-Mix" on the WPS to support japanese characters
@@ -56,26 +60,26 @@ Link to the original theme : https://github.com/gogi-goji/sprocket-rockbox-theme
 
 Licence : https://creativecommons.org/licenses/by-sa/3.0/deed.fr
 
-# Sprocket or Minim ?
-The choice is up to you, I currently just like to use both. I often prefer slightly Minim because the design is much more advanced and ambitious, and because cover arts looks much better in it. With my improvements, Minim is now just as usable as Sprocket; you have access to all important info in the WPS just by looking at any time your screen during a few seconds.
+# SprocketModern or Minimless ?
+The choice is up to you, I currently just like to use both. I often prefer slightly Minimless because the design is much more advanced and ambitious, and because cover arts looks much better in it. With my improvements, Minimless is now just as usable as SprocketModern; you have access to all important info in the WPS just by looking at any time your screen during a few seconds.
 
 # Thoughts about cover arts
 Some things that I noticed about cover arts : 
-- This tool https://www.mp3tag.de/en/download.html can in the menu "Actions" mass convert embedded images to plain jpeg. I recommend using it to convert to 138x138 jpeg all of your library. Why 138x138 and not 150x150 ? Because it's how Minim will render your image. Using the exact amount of pixels will avoid Rockbox to do any work with resizing in most cases. Don't push the quality slider to the maximum, it's un-necessary and overkill, keep it at the default level (which is 2 bars below the maximum).
+- This tool https://www.mp3tag.de/en/download.html can in the menu "Actions" mass convert embedded images to plain jpeg. I recommend using it to convert to 100x100 jpeg all of your library. Don't push the quality slider to the maximum, it's un-necessary and overkill, keep it at the default level (which is 2 bars below the maximum).
 - I recommend embedding the images directly in all of your music. It looks like it is simplier for Rockbox to show a picture that is embedded in the file rather than making a new disk request to load it from another file in the disk.
 - Configure Rockbox to load from embedded in priority : Settings -> Playback Settings -> Album Art and select "Prefer Embedded"
-- If you really like to see your cover arts, Minim will show them much better in WPS than any other Rockbox theme (but not fully, only around 1/2 of your cover). Minim show them at 138x138 then cut a part of it to show the data from your music at the bottom of your screen. Sprocket and the default theme (cabbiev2) show cover arts fully at 55x55 which make them often very unreadable (so it's useless and frustrating to look at if those are just looking like garbage). It's looking much better to not show all of it but with a greater resolution. With Minim, you can often recognize the artists and sometimes read some big text written in the picture which is a pretty fun experience on the tiny screen of an iPod Mini.
+- If you really like to see your cover arts, Minimless will show them much better in WPS than any other Rockbox theme (but not fully, only around 80% of your cover). Minimless in WPS show them at 90x90 then cut a little part of it to show the data from your music at the bottom of your screen and it also cut some pixels from top. SprocketModern and the default theme (cabbiev2) shows cover arts fully at 55x55 which make them often very unreadable (so it's useless and frustrating to look at if those are just looking like garbage). It's looking much better to not show all of it but with a greater resolution. With Minimless, you can often recognize the artists and sometimes read some big text written in the picture which is a pretty fun experience on the tiny screen of an iPod Mini.
 - It looks like Rockbox can't support embedded cover arts on certain formats like .opus. Use mp3tag software to extract them to cover.jpg . Embedded cover arts should work just fine on most formats like mp3, aac, musepack (mpc)
 
 When configured exactly like this, your covers should load instantly.
 
 # Screenshots
-## Minim
-![Alt text](MINIM%20b4%20-%20Mini/screenshots/1.png?raw=true "WPS1")
-![Alt text](MINIM%20b4%20-%20Mini/screenshots/3.png?raw=true "WPS2")
-![Alt text](MINIM%20b4%20-%20Mini/screenshots/2.png?raw=true "Home")
+## Minimless
+![Alt text](Minimless/screenshots/1.png?raw=true "WPS1")
+![Alt text](Minimless/screenshots/3.png?raw=true "WPS2")
+![Alt text](Minimless/screenshots/2.png?raw=true "Home")
 
-## Sprocket
-![Alt text](Sprocket/screenshots/1.png?raw=true "Home")
-![Alt text](Sprocket/screenshots/2.png?raw=true "WPS")
-![Alt text](Sprocket/screenshots/3.png?raw=true "WPS with cover art")
+## SprocketModern
+![Alt text](SprocketModern/screenshots/1.png?raw=true "Home")
+![Alt text](SprocketModern/screenshots/2.png?raw=true "WPS")
+![Alt text](SprocketModern/screenshots/3.png?raw=true "WPS with cover art")

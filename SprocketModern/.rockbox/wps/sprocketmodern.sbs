@@ -8,8 +8,9 @@
 # <https://github.com/gogi-goji/sprocket-rockbox-theme> 
 #
 # SBS file (Base skin for a custom statusbar)
-# .rockbox/wps/sprocket.sbs
+# .rockbox/wps/sprocketmodern.sbs
 #
+# SprocketModern improvements by OlsroFR
 # Disable the default status bar (since we use our own)
 %wd
 # Disable list title

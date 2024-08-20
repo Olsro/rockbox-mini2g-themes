@@ -30,6 +30,7 @@ Bug fixes made by me :
 - Fix multiple issues that could cause the lockscreen to glitch out
 - The lock icon was not showing up on WPS if no album cover is present or if album cover is disabled, it's now fixed
 - Reduce CPU usage (makes the battery charging and the disk accesses icons refreshing much slower)
+- Reduce CPU usage while switching tracks, by showing the volume realtime viewer only 1s after the start of the song (For some reason, each time you switch a song (even if the next one has a cover art), the realtime volume viewer is always shown during a few seconds while the next song is loading...)
 
 This theme already supports japanese characters just fine out of the box.
 With all of my work, you lose 5 pixels that were previously showing the cover art in WPS but you get a precious 3rd line using a smaller font. It's less minimal than the work and the vision of yuuiko, but in my opinion it is much more usable because you now get access to every important data directly on your WPS just by looking into your screen a few seconds without having to touch to anything. Minim is now competiting in terms of usability against a very complete and simple looking theme like Sprocket in my opinion, while still looking and feeling much more "Minimal" and esthetic than any other available Rockbox themes available for the iPod Mini.

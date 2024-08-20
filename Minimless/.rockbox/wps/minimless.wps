@@ -170,7 +170,7 @@
 # No Art
 %Vl(cn,0,0,90,-40,2)%Vf(1)%Vb(2)
 # Don't show the volume output realtime viewer to avoid lags for the OPUS format because it is very difficult to decode
-%?if(%fc,!=,Opus)<%pL(0,0,90,-,vertical,noborder)>
+%?if(%fc,!=,Opus)<%?if(%pc,>,0)<%pL(0,0,90,-,vertical,noborder)>>
 
 # Title
 %Vl(a,0,-33,-25,11,3)

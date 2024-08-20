@@ -67,7 +67,7 @@
 
 #Display time elapsed/remaining while fast forwarding or rewinding
 
-%?mv(0.5)<%Vd(view_volumeBar_statusBarTop)%?if(%St(volume display), =,numeric)<%Vd(view_numericVolume_statusBarTop)|%Vd(view_speakerIcon_statusBarTop)>|%Vd(view_progressBar_statusBarTop)%?if(%mp,<,4)<%Vd(a)%Vd(b)%Vd(d)%Vd(e)%Vd(i)|%Vd(view_timeElapsed_statusBarTop)%Vd(view_timeRemaining_statusBarTop)>>
+%?mv(0.5)<%Vd(view_volumeBar_statusBarTop)%?if(%St(volume display), =,numeric)<%Vd(view_numericVolume_statusBarTop)|%Vd(view_speakerIcon_statusBarTop)>|%Vd(view_progressBar_statusBarTop)%?if(%mp,<,4)<%Vd(a)%Vd(b)%Vd(d)%Vd(e)%Vd(i)|%Vd(view_SI)>>
 
 %wd
 
@@ -123,18 +123,10 @@
 %Vl(view_progressBar_statusBarTop,0,-38,-,2,2)
 %pb(0,0,-,-, noborder)
 
-# Time elapsed
-%Vl(view_timeElapsed_statusBarTop,2,-26,40,14,2)
-%al%pc
-
 # Scrubber Icon
-#%Vl(view_timeElapsed_statusBarTop,72,-24,15,9,2)
-%Vl(view_timeElapsed_statusBarTop,62,-24,15,9,2)
+#%Vl(view_SI,72,-24,15,9,2)
+%Vl(view_SI,62,-24,15,9,2)
 %?mp<|||%xd(Ca)|%xd(Cb)>
-
-# Time remaining
-%Vl(view_timeRemaining_statusBarTop,-40,-26,40,14,2)
-%ar-%pr
 
 
 

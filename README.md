@@ -75,6 +75,10 @@ When configured exactly like this, your covers should load instantly.
 # Some special characters do not show correctly
 The font "Sazanami Mincho 11px" supports almost all special characters in all languages but not all. You can use the software "mp3tag" to mass replace problematic characters (For example, "œ" can become "oe" which means the same but will show correctly). The only font that supports natively all characters is "14-RockBox-Mix" but it is much taller and larger than Sazanami. You can find more details about international coverage about fonts here : https://translate.rockbox.org/whichfont.php
 
+# I want more advices to optimize my experience on my iPod Mini
+Feel free to check this post : https://www.reddit.com/r/ipod/comments/1ebxjur/ipod_mini_sharing_thoughts_and_tricks_on_daily/
+You will find many tricks and advices.
+
 # Screenshots
 ## Minimless
 ![Alt text](Minimless/screenshots/1.png?raw=true "WPS1")

@@ -82,6 +82,9 @@ You will find many tricks and advices.
 # About iPod Mini 1G
 Those themes should work just fine with the iPod Mini 1G but I can't test it.
 
+# About other Black&White iPods (1G, 2G, 3G, 4G)
+You can find the same-but-adapted themes in this repo : https://github.com/Olsro/rockbox-mini2g-themes
+
 # Screenshots
 ## Minimless
 ![Alt text](Minimless/screenshots/1.png?raw=true "WPS1")

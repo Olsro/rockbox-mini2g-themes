@@ -79,6 +79,9 @@ The font "Sazanami Mincho 11px" supports almost all special characters in all la
 Feel free to check this post : https://www.reddit.com/r/ipod/comments/1ebxjur/ipod_mini_sharing_thoughts_and_tricks_on_daily/
 You will find many tricks and advices.
 
+# About iPod Mini 1G
+Those themes should work just fine with the iPod Mini 1G but I can't test it.
+
 # Screenshots
 ## Minimless
 ![Alt text](Minimless/screenshots/1.png?raw=true "WPS1")

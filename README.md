@@ -66,7 +66,7 @@ The choice is up to you, I currently just like to use both. I often prefer sligh
 
 # Thoughts about cover arts
 Some things that I noticed about cover arts : 
-- This tool https://www.mp3tag.de/en/download.html can in the menu "Actions" mass convert embedded images to plain jpeg and extract them. I recommend using it to convert to 98x98 jpeg all of your library. Don't push the quality slider to the maximum, it's un-necessary and overkill, keep it at the default level (which is 2 bars below the maximum).
+- This tool https://www.mp3tag.de/en/download.html can in the menu "Actions" mass convert embedded images to plain jpeg and extract them. I recommend using it to convert to 200x200 jpeg all of your library. Don't push the quality slider to the maximum, it's un-necessary and overkill, keep it at the default level (which is 2 bars below the maximum).
 - Use externally loaded cover arts and sanitize embedded ones using Foobar2000 to save some precious disk space
 - If you really like to see your cover arts, Minimless will show them much better in WPS than any other Rockbox theme (but not fully, only around 80% of your cover). Minimless in WPS show them at 98x98 then cut a little part of it to show the data from your music at the bottom of your screen and it also cut some pixels from top. SprocketModern and the default theme (cabbiev2) shows cover arts fully at 55x55 which make them often very unreadable (so it's useless and frustrating to look at if those are just looking like garbage). It's looking much better to not show all of it but with a greater resolution. With Minimless, you can often recognize the artists and sometimes read some big text written in the picture which is a pretty fun experience on the tiny screen of an iPod Mini.
 

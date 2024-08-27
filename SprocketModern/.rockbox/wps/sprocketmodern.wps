@@ -127,11 +127,6 @@
 # Next track info [scrolling]
 #%ac%s%?Fn<%?It<Next: %It by %?Ia<%Ia|%(Unknown Artist%)>|%Fn>|- End of Playlist ->
 #
-# Progress Bar
-# D = full, E = Empty
-%V(3,85,132,8,-)%Vf(0)%Vb(3)
-%pb(0,0,132,8,image,D,backdrop,E)
-#
 # Full View (all screen without cover art)
 %Vl(TI,0,27,138,56,3)%Vf(0)%Vb(3)
 #

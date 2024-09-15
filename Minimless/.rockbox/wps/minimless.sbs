@@ -271,7 +271,7 @@
 #menu title
 %Vl(t,14,0,-36,14,2)
 #%al%s%Lt %Li
-%al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%?cc<%?cf<%cH:%cM|%cl:%cM %cP>>%?if(%St(battery display), =, graphic)<%?if(%bl, =, 100)<%arCGD|%?if(%bl, =, 99)<%arCGD|%ar%bl%%>>>|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+%al%s%?cs<iPod mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%?cc<%?cf<%cH:%cM|%cl:%cM %cP>>%?if(%St(battery display), =, graphic)<%?if(%bl, =, 100)<%arCGD|%?if(%bl, =, 99)<%arCGD|%ar%bl%%>>>|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 
 #separator bar on top
 %Vl(t,0,14,-,1,2)

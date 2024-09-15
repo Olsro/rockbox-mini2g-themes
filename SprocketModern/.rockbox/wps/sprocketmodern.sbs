@@ -54,10 +54,10 @@
 %al%pv dB
 # Title bar menu (short, when lock icon is shown)
 %Vl(TBMS,0,1,51,11,3)%Vf(0)%Vb(3)
-%al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+%al%s%?cs<iPod mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 # Title bar menu (long, when lock icon is hidden)
 %Vl(TBML,0,1,90,11,3)%Vf(0)%Vb(3)
-%al%s%?cs<iPod Mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+%al%s%?cs<iPod mini|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
 #
 # Hold Switch
 %Vl(hold,51,1,8,10,-)%Vf(0)%Vb(3)

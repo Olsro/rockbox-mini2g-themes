@@ -6,7 +6,7 @@ The idea started essentially about just fixing some bugs and adding very small i
 I think this work may benefit to the community, so I share it in the hope that this will be useful to someone in the vast Internet.
 
 # Requirement
-You need to install extra "Fonts file" from the last daily build : https://www.rockbox.org/daily.shtml
+You need to install extra "Fonts file" from the latest daily build : https://www.rockbox.org/daily.shtml
 
 # Minimless
 Based on Minim b4 by yuuiko. It's still Minimal... but less minimal than it used to be.

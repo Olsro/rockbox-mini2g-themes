@@ -91,10 +91,10 @@ You can tip me on Patreon : https://www.patreon.com/Olsro
 # Screenshots
 ## Minimless
 ![Alt text](Minimless/screenshots/1.png?raw=true "WPS1")
-![Alt text](Minimless/screenshots/3.png?raw=true "WPS2")
 ![Alt text](Minimless/screenshots/2.png?raw=true "Home")
+![Alt text](Minimless/screenshots/3.png?raw=true "WPS2")
 
 ## SprocketModern
-![Alt text](SprocketModern/screenshots/1.png?raw=true "Home")
-![Alt text](SprocketModern/screenshots/2.png?raw=true "WPS")
-![Alt text](SprocketModern/screenshots/3.png?raw=true "WPS with cover art")
+![Alt text](SprocketModern/screenshots/1.png?raw=true "WPS1")
+![Alt text](SprocketModern/screenshots/2.png?raw=true "Home")
+![Alt text](SprocketModern/screenshots/3.png?raw=true "WPS2")
